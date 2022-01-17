@@ -1,0 +1,11 @@
+<div class="card">
+    <h5>TabView</h5>
+
+    <p-tabView >
+        <p-tabPanel *ngFor="let tab of tabs;let i = index;" [header]="tab.header"   class="line-height-3 m-0"  closable='true'>
+            <ng-container *ngComponentOutlet="tab.component"></ng-container>
+           
+        </p-tabPanel>
+       
+    </p-tabView>
+</div>

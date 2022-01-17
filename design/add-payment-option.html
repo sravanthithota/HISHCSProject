@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Add Payment </title>
+        <meta name="description" content="" />
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+        <!-- style -->
+        <link rel="stylesheet" href="css/site.min.css" />
+    </head>
+    <body class="layout-column">
+        <header class="page-header bg-white box-shadow sticky">
+            <div class="navbar navbar-expand-lg">
+                <!-- brand -->
+                <a href="#!" class="navbar-brand">
+                    <span class="hidden-folded d-inline l-s-n-1x m-0">
+                        <svg version="1.1" class="dv_logo_main" enable-background="new 0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 685 168" style="width: 170px; margin: 0; position: relative; top: 0;"> <g> <g> <path d="M104.2,4v96.2H83.6l0.5-64.8L54.8,77.3h-5.7l-29-40.9l0.5,63.8H0.1L0.1,4h21.1L52,50.5L82.6,4H104.2z"></path> <path d="M124.7,4h20.7v96.2h-20.7V4z"></path> <path d="M233.6,100.2l-29-35.2h-17.9v35.2H166V4h47.7c9.8,0,17.8,2.8,23.9,8.3s9.2,12.9,9.2,22c0,6.3-1.8,12-5.5,16.9 c-3.7,5-8.7,8.6-15,11l32.2,38H233.6z M186.7,47.7h24.1c4.5,0,8.1-1.2,10.7-3.6c2.7-2.4,4-5.5,4-9.5c0-4.2-1.3-7.5-4-9.8 c-2.7-2.3-6.3-3.5-10.7-3.5h-24.1V47.7z"></path> <path d="M335,100.2L306,65H288v35.2h-20.7V4h47.7c9.8,0,17.8,2.8,23.9,8.3c6.1,5.5,9.2,12.9,9.2,22c0,6.3-1.8,12-5.5,16.9 c-3.7,5-8.7,8.6-15,11l32.2,38H335z M288,47.7h24.1c4.5,0,8.1-1.2,10.7-3.6c2.7-2.4,4-5.5,4-9.5c0-4.2-1.3-7.5-4-9.8 c-2.7-2.3-6.3-3.5-10.7-3.5H288V47.7z"></path> <path d="M378,86.6c-9.7-9.1-14.5-20.6-14.5-34.5s4.8-25.4,14.5-34.5C387.6,8.5,399.9,4,414.7,4c14.9,0,27.1,4.5,36.7,13.6 c9.6,9.1,14.4,20.6,14.4,34.5s-4.8,25.4-14.4,34.5c-9.6,9.1-21.9,13.6-36.7,13.6C399.9,100.2,387.6,95.7,378,86.6z M436.1,73.9 c5.7-5.7,8.5-13,8.5-21.8s-2.8-16-8.5-21.8c-5.7-5.7-12.8-8.6-21.4-8.6c-8.7,0-15.9,2.9-21.6,8.6c-5.7,5.7-8.5,13-8.5,21.8 s2.8,16,8.5,21.8c5.7,5.7,12.9,8.6,21.6,8.6C423.3,82.5,430.5,79.6,436.1,73.9z"></path> <path d="M547.6,100.2l-29-35.2h-17.9v35.2h-20.7V4h47.7c9.8,0,17.8,2.8,23.9,8.3s9.2,12.9,9.2,22c0,6.3-1.8,12-5.5,16.9 c-3.7,5-8.7,8.6-15,11l32.2,38H547.6z M500.6,47.7h24.1c4.5,0,8.1-1.2,10.7-3.6c2.7-2.4,4-5.5,4-9.5c0-4.2-1.3-7.5-4-9.8 c-2.7-2.3-6.3-3.5-10.7-3.5h-24.1V47.7z"></path> <path d="M577.1,92.3l5.8-17.9c10.8,6.4,22,9.6,33.6,9.6c5.2,0,9.3-0.9,12.5-2.7c3.1-1.8,4.7-4.6,4.7-8.4c0-3.1-1.7-5.4-5.2-7 c-3.5-1.6-10.1-3.5-19.8-5.8c-3.3-0.8-6.2-1.6-8.7-2.4c-2.5-0.8-5.2-2-8.1-3.5c-2.9-1.5-5.4-3.3-7.2-5.3c-1.9-2-3.5-4.5-4.7-7.6 c-1.3-3.1-1.9-6.5-1.9-10.3c0-9.3,3.6-16.5,10.7-21.6C595.7,4.5,605,2,616.5,2c11.8,0,23,2.7,33.6,8.2l-6.5,17 c-9.1-4.9-18.6-7.4-28.5-7.4c-5.1,0-9,0.8-11.8,2.5c-2.8,1.7-4.2,4-4.2,7c0,3,1.6,5.3,4.8,6.9c3.2,1.6,8.7,3.3,16.4,5.1 c3.9,0.9,7.1,1.7,9.8,2.5c2.6,0.8,5.7,2,9.1,3.6c3.4,1.6,6.2,3.4,8.2,5.3c2.1,1.9,3.8,4.5,5.3,7.6c1.4,3.1,2.2,6.7,2.2,10.6 c0,9.6-3.8,17.2-11.3,22.8c-7.5,5.6-17.1,8.4-28.8,8.4C602.3,102.2,589.6,98.9,577.1,92.3z"></path> </g> <g> <path d="M3.9,130.6H15c3.2,0,5.6,0.7,7.3,2.1c1.7,1.4,2.6,3.3,2.6,5.8c0,1.8-0.5,3.3-1.4,4.6s-2.1,2.1-3.6,2.4 c2.2,0.4,3.9,1.2,5.1,2.4c1.2,1.2,1.8,2.8,1.8,4.7c0,2.6-1,4.6-3.1,6c-2.1,1.4-4.9,2.1-8.6,2.1H3.9V130.6z M16,144.4 c1.9,0,3.4-0.5,4.4-1.5c1.1-1,1.6-2.5,1.6-4.3c0-1.8-0.6-3.1-1.9-4c-1.2-0.9-3-1.4-5.3-1.4H6.6v11.3H16z M15.1,158.2 c2.8,0,5-0.5,6.5-1.4c1.5-0.9,2.3-2.3,2.3-4.2c0-1.8-0.7-3.2-2.1-4.2s-3.3-1.5-5.9-1.5H6.6v11.3H15.1z"></path> <path d="M78.9,158.2v2.5H57.8v-30h21.1v2.5H60.5v11.5h16.6v2.5H60.5v11.1H78.9z"></path> <path d="M120,130.6h2.9l13,30h-3l-3.2-7.6h-16.5l-3.2,7.6H107L120,130.6z M128.7,150.6l-7.2-16.9l-7.3,16.9H128.7z"></path> <path d="M168.2,158.2c-2.1-2-3.1-4.9-3.1-8.5v-19.1h2.7v19.1c0,2.9,0.8,5.2,2.4,6.7c1.6,1.5,3.9,2.3,6.9,2.3c3,0,5.3-0.8,7-2.3 c1.6-1.5,2.5-3.8,2.5-6.7v-19.1h2.7v19.1c0,3.7-1.1,6.5-3.2,8.5c-2.1,2-5.1,3-9,3C173.3,161.2,170.3,160.2,168.2,158.2z"></path> <path d="M244.8,133.1h-11.5v27.5h-2.7v-27.5h-11.5v-2.5h25.7V133.1z"></path> <path d="M283.1,148l-11.8-17.3h3.1l10.1,15l10.1-15h3.1L285.9,148v12.7h-2.7L283.1,148z"></path> <path d="M361.2,130.6h2.7v27.5h17.6v2.5h-20.3V130.6z"></path> <path d="M414,156.8c-2.9-2.9-4.3-6.7-4.3-11.2s1.4-8.3,4.3-11.2c2.9-2.9,6.5-4.4,10.9-4.4c4.4,0,8,1.5,10.9,4.4 c2.9,2.9,4.3,6.7,4.3,11.2s-1.4,8.3-4.3,11.2c-2.9,2.9-6.5,4.4-10.9,4.4C420.5,161.2,416.9,159.8,414,156.8z M433.7,155 c2.3-2.5,3.5-5.6,3.5-9.4s-1.2-6.9-3.5-9.4c-2.3-2.5-5.3-3.7-8.8-3.7c-3.6,0-6.5,1.2-8.9,3.7c-2.3,2.5-3.5,5.6-3.5,9.4 s1.2,6.9,3.5,9.4c2.3,2.5,5.3,3.7,8.9,3.7C428.5,158.7,431.4,157.5,433.7,155z"></path> <path d="M473.8,158.2c-2.1-2-3.1-4.9-3.1-8.5v-19.1h2.7v19.1c0,2.9,0.8,5.2,2.4,6.7c1.6,1.5,3.9,2.3,6.9,2.3c3,0,5.3-0.8,7-2.3 c1.6-1.5,2.5-3.8,2.5-6.7v-19.1h2.7v19.1c0,3.7-1.1,6.5-3.2,8.5c-2.1,2-5.1,3-9,3C478.8,161.2,475.9,160.2,473.8,158.2z"></path> <path d="M551.7,130.6v30h-2.6l-19.7-25.8v25.8h-2.7v-30h2.6l19.6,25.7v-25.7H551.7z"></path> <path d="M586.5,157.1c-2.9-2.8-4.3-6.5-4.3-11.2c0-4.9,1.4-8.7,4.4-11.6c3-2.8,6.8-4.3,11.6-4.3c3.4,0,6.7,0.8,9.8,2.4l-0.9,2.4 c-2.7-1.6-5.6-2.3-8.8-2.3c-3.9,0-7.1,1.2-9.6,3.6c-2.5,2.4-3.7,5.6-3.7,9.7c0,3.9,1.2,7.1,3.6,9.4c2.4,2.3,5.5,3.5,9.3,3.5 c2.6,0,5.4-0.6,8.2-1.9l0-8.8h-9v-2.5h11.7v12.8c-4.1,1.9-7.8,2.9-11.2,2.9C593.1,161.2,589.3,159.8,586.5,157.1z"></path> <path d="M661.1,158.2v2.5H640v-30h21.1v2.5h-18.4v11.5h16.6v2.5h-16.6v11.1H661.1z"></path> </g> </g>                       </svg>
+                    </span>
+                </a>
+                <button type="button" class="btn btn-default dv_logout_btn">
+                    <i data-feather="log-out"></i>
+                    logout
+                </button>
+            </div>
+        </header>
+        <div id="main" class="layout-row flex">
+            <!-- ############ Aside START-->
+            <div id="asides" class="page-sidenav no-shrink bg-white nav-dropdown fade sticky" aria-hidden="true">
+                <div class="sidenav h-100 modal-dialog bg-white">
+                    <!-- sidenav top --><!-- Flex nav content -->
+                    <div class="flex scrollable hover">
+                        <div class="nav-active-text-primary" data-nav>
+                            <ul class="nav">
+                                <li>
+                                    <a href="dashboard.html">
+                                        <span class="nav-icon"><i data-feather="home"></i></span> <span class="nav-text">Dashboard</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">catalogue</span> <span class="nav-caret"></span>
+                                    </a>
+                                    <ul class="nav-sub nav-mega">
+                                        <li><a href="brands.html"><span class="nav-text">brands</span></a></li>
+                                        <li><a href="category.html"><span class="nav-text">category</span></a></li>
+                                        <li><a href="sub-category.html"><span class="nav-text">sub category</span></a></li>
+                                        <li><a href="filter-management.html"><span class="nav-text">filter management</span></a></li>
+                                        <li><a href="products.html"><span class="nav-text">product management</span></a></li>
+                                        <li><a href="product-reviews.html"><span class="nav-text">product review</span></a></li>
+                                        <li><a href="locations.html"><span class="nav-text">location</span></a></li>
+                                        <li><a href="stock-transfer.html"><span class="nav-text">stock transfer</span></a></li>
+                                        <li><a href="upload-download-excel.html"><span class="nav-text">upload / download </span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">sales</span> <span class="nav-caret"></span>
+                                    </a>
+                                    <ul class="nav-sub nav-mega">
+                                        <li><a href="#!"><span class="nav-text">order management</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">incomplete orders</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">shipment</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">return request</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">cancelled products</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">complaint</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">current wishlist</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">current carts</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">coupons</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">best seller</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">product never purch.</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">country report</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">inventory </span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">customers</span> <span class="nav-caret"></span>
+                                    </a>
+                                    <ul class="nav-sub nav-mega">
+                                        <li><a href="#!"><span class="nav-text">customer management</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">customer reports</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">online customer</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">vendor management</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">user reports</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">seller management</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">campaign</span> <span class="nav-caret"></span>
+                                    </a>
+                                    <ul class="nav-sub nav-mega">
+                                        <li><a href="#!"><span class="nav-text">email campaign</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">social media campaign</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">mobile campaign</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">promotions </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">extension </span> <span class="nav-caret"></span>
+                                    </a>
+                                    <ul class="nav-sub nav-mega">
+                                        <li><a href="#!"><span class="nav-text">newsletter </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">quotation </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">gift certificates </span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">reports </span> <span class="nav-caret"></span>
+                                    </a>
+                                    <ul class="nav-sub nav-mega">
+                                        <li><a href="#!"><span class="nav-text">Product Sales Cost </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Product Insert Report </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">SEM Expenses Report  </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">SEM Sales Report </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Product Visits </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Category Sales Cost </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Active Customer Locations </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Shipping Cost Per Order </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Order Status </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Top 10 Customers(Cost) </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Top 10 Customers(Item) </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Top 10 Categories(Cost) </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Top 10 Categories(Item) </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Top 10 Products(Cost) </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Top 10 Products(Item) </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Payment Method(orders) </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Payment Method(Cost) </span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">design </span> <span class="nav-caret"></span>
+                                    </a>
+                                    <ul class="nav-sub nav-mega">
+                                        <li><a href="#!"><span class="nav-text">CMS </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">home page banners </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">home category </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">how to guide </span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">setting </span> <span class="nav-caret"></span>
+                                    </a>
+                                    <ul class="nav-sub nav-mega">
+                                        <li><a href="#!"><span class="nav-text">store detail </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">roles </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">currency </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">blogs </span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">shipping option </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">payment option </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- sidenav bottom -->
+                </div>
+            </div>
+            <!-- ############ Aside END--><!-- ############ Content START-->
+            <div id="content" class="flex">
+                <!-- ############ Main START-->
+                <div class="page-container">
+                    <div class="pt-3 pr-3 pb-5 pl-3">
+                        <div class="mb-5">
+                            <h2 class="dv_page_heading"><svg data-toggle="tooltip" data-placement="top" title="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dv_back_to_page_svg" data-original-title="Go back"><polyline points="15 18 9 12 15 6"></polyline></svg> Add Payment </h2>
+                            <div class="row dv_search_delete_action_common">
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card mb-3">
+                                        <div class="card-header"><strong>Country Details</strong></div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="text-muted text-capitalize" for="name">Country </label>
+                                                        <select class="form-control dv_common_select_for_all">
+                                                            <option selected="">Select</option>
+                                                            <option>United Arab Emirates </option>
+                                                            <option>Qatar </option>
+                                                            <option>India </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <style type="text/css">
+                                        .dv_payment_option_wrapper { transition: 300ms; border: 1px solid #ebebeb; padding: 15px; border-radius: 5px; height: 120px; cursor: pointer; }
+                                        .dv_payment_option_wrapper:hover { border-color: rgb(235 235 235 / 80%); background: rgb(235 235 235 / 30%); }
+                                        .dv_payment_option_wrapper:hover>svg.dv_selected_check_active { fill: #000000 !important; }
+                                        .dv_payment_option_wrapper.active>svg.dv_selected_check_active { fill: #000000 !important; }
+                                        .dv_payment_option_wrapper.active { border-color: #6e6e6e; }
+                                        .dv_payment_option_name { text-align: center; text-transform: capitalize; display: block; padding: 15px 0 0 0; }
+                                    </style>
+
+                                    <div class="card mb-3">
+                                        <div class="card-header"><strong>Payment option</strong> <span style=" cursor: pointer; float: right; color: #000000; text-transform: capitalize; " data-toggle="modal" data-target="#addpaymentpopup">add new payment </span> </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <div class="dv_payment_option_wrapper active">
+                                                        <svg class="dv_selected_check_active" x="0px" y="0px" viewBox="0 0 408.576 408.576" style="enable-background:new 0 0 408.576 408.576; fill: #ebebeb; width:25px; margin: 0 auto 15px auto; display: block;" xml:space="preserve"> <g> <g> <path d="M204.288,0C91.648,0,0,91.648,0,204.288s91.648,204.288,204.288,204.288s204.288-91.648,204.288-204.288 S316.928,0,204.288,0z M318.464,150.528l-130.56,129.536c-7.68,7.68-19.968,8.192-28.16,0.512L90.624,217.6 c-8.192-7.68-8.704-20.48-1.536-28.672c7.68-8.192,20.48-8.704,28.672-1.024l54.784,50.176L289.28,121.344 c8.192-8.192,20.992-8.192,29.184,0C326.656,129.536,326.656,142.336,318.464,150.528z"/> </g> </g></g></svg>
+                                                        <svg style=" width: 100px; margin: 0 auto; display: block; " id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 566.93 137.35"><defs><style>.cls-1{fill:#009ee3;}.cls-1,.cls-2,.cls-3{fill-rule:evenodd;}.cls-2{fill:#113984;}.cls-3{fill:#172c70;}</style></defs><title>paypal-seeklogo.com</title><path class="cls-1" d="M192.95,386.87h38.74c20.8,0,28.63,10.53,27.42,26-2,25.54-17.44,39.67-37.92,39.67H210.85c-2.81,0-4.7,1.86-5.46,6.9L201,488.74c-0.29,1.9-1.29,3-2.79,3.15H173.87c-2.29,0-3.1-1.75-2.5-5.54l14.84-93.93C186.79,388.66,188.85,386.87,192.95,386.87Z" transform="translate(-143.48 -354.54)"/><path class="cls-2" d="M361.14,385.13c13.07,0,25.13,7.09,23.48,24.76-2,21-13.25,32.62-31,32.67H338.11c-2.23,0-3.31,1.82-3.89,5.55l-3,19.07c-0.45,2.88-1.93,4.3-4.11,4.3H312.68c-2.3,0-3.1-1.47-2.59-4.76L322,390.29c0.59-3.76,2-5.16,4.57-5.16h34.54Zm-23.5,40.92h11.75c7.35-.28,12.23-5.37,12.72-14.55,0.3-5.67-3.53-9.73-9.62-9.7l-11.06.05-3.79,24.2h0Zm86.21,39.58c1.32-1.2,2.66-1.82,2.47-.34l-0.47,3.54c-0.24,1.85.49,2.83,2.21,2.83h12.82c2.16,0,3.21-.87,3.74-4.21l7.9-49.58c0.4-2.49-.21-3.71-2.1-3.71H436.32c-1.27,0-1.89.71-2.22,2.65l-0.52,3.05c-0.27,1.59-1,1.87-1.68.27-2.39-5.66-8.49-8.2-17-8-19.77.41-33.1,15.42-34.53,34.66-1.1,14.88,9.56,26.57,23.62,26.57,10.2,0,14.76-3,19.9-7.7h0ZM413.11,458c-8.51,0-14.44-6.79-13.21-15.11s9.19-15.11,17.7-15.11,14.44,6.79,13.21,15.11S421.63,458,413.11,458h0Zm64.5-44h-13c-2.68,0-3.77,2-2.92,4.46l16.14,47.26L462,488.21c-1.33,1.88-.3,3.59,1.57,3.59h14.61a4.47,4.47,0,0,0,4.34-2.13l49.64-71.2c1.53-2.19.81-4.49-1.7-4.49H516.63c-2.37,0-3.32.94-4.68,2.91l-20.7,30L482,416.82C481.46,415,480.11,414,477.62,414Z" transform="translate(-143.48 -354.54)"/><path class="cls-1" d="M583.8,385.13c13.07,0,25.13,7.09,23.48,24.76-2,21-13.25,32.62-31,32.67H560.78c-2.23,0-3.31,1.82-3.89,5.55l-3,19.07c-0.45,2.88-1.93,4.3-4.11,4.3H535.35c-2.3,0-3.1-1.47-2.59-4.76l11.93-76.45c0.59-3.76,2-5.16,4.57-5.16H583.8Zm-23.5,40.92h11.75c7.35-.28,12.23-5.37,12.72-14.55,0.3-5.67-3.53-9.73-9.62-9.7l-11.06.05-3.79,24.2h0Zm86.21,39.58c1.32-1.2,2.66-1.82,2.47-.34l-0.47,3.54c-0.24,1.85.49,2.83,2.21,2.83h12.82c2.16,0,3.21-.87,3.74-4.21l7.9-49.58c0.4-2.49-.21-3.71-2.1-3.71H659c-1.27,0-1.89.71-2.22,2.65l-0.52,3.05c-0.27,1.59-1,1.87-1.68.27-2.39-5.66-8.49-8.2-17-8-19.77.41-33.1,15.42-34.53,34.66-1.1,14.88,9.56,26.57,23.62,26.57,10.2,0,14.76-3,19.9-7.7h0ZM635.78,458c-8.51,0-14.44-6.79-13.21-15.11s9.19-15.11,17.7-15.11,14.44,6.79,13.21,15.11S644.29,458,635.78,458h0Zm59.13,13.74h-14.8a1.75,1.75,0,0,1-1.81-2l13-82.36a2.55,2.55,0,0,1,2.46-2h14.8a1.75,1.75,0,0,1,1.81,2l-13,82.36A2.55,2.55,0,0,1,694.91,471.76Z" transform="translate(-143.48 -354.54)"/><path class="cls-2" d="M168.72,354.54h38.78c10.92,0,23.88.35,32.54,8,5.79,5.11,8.83,13.24,8.13,22-2.38,29.61-20.09,46.2-43.85,46.2H185.2c-3.26,0-5.41,2.16-6.33,8l-5.34,34c-0.35,2.2-1.3,3.5-3,3.66H146.6c-2.65,0-3.59-2-2.9-6.42L160.9,361C161.59,356.62,164,354.54,168.72,354.54Z" transform="translate(-143.48 -354.54)"/><path class="cls-3" d="M179.43,435.29l6.77-42.87c0.59-3.76,2.65-5.56,6.75-5.56h38.74c6.41,0,11.6,1,15.66,2.85-3.89,26.36-20.94,41-43.26,41H185C182.44,430.72,180.56,432,179.43,435.29Z" transform="translate(-143.48 -354.54)"/></svg>
+                                                    </div>
+                                                    <p class="dv_payment_option_name">paypal</p>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="dv_payment_option_wrapper">
+                                                        <svg class="dv_selected_check_active" x="0px" y="0px" viewBox="0 0 408.576 408.576" style="enable-background:new 0 0 408.576 408.576; fill: #ebebeb; width:25px; height: 25px; margin: 0 auto 15px auto; display: block;" xml:space="preserve"> <g> <g> <path d="M204.288,0C91.648,0,0,91.648,0,204.288s91.648,204.288,204.288,204.288s204.288-91.648,204.288-204.288 S316.928,0,204.288,0z M318.464,150.528l-130.56,129.536c-7.68,7.68-19.968,8.192-28.16,0.512L90.624,217.6 c-8.192-7.68-8.704-20.48-1.536-28.672c7.68-8.192,20.48-8.704,28.672-1.024l54.784,50.176L289.28,121.344 c8.192-8.192,20.992-8.192,29.184,0C326.656,129.536,326.656,142.336,318.464,150.528z"/> </g> </g></g></svg>
+                                                        <svg style="height: 40px; width: 100px; margin: 0 auto; display: block; " version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="472px" height="336px" viewBox="0 0 472 336" style="overflow:visible;enable-background:new 0 0 472 336;" xml:space="preserve"> <style type="text/css"> .st0{fill:#399F49;} .st1{fill:#9ACD72;} .st2{fill:#DFB28B;} </style> <defs> </defs> <path class="st0" d="M400,128v208H0l0-216h272"/> <path class="st1" d="M240,152H57.2c0,0,0,0,0,0c0,14-11.2,25.3-25.2,25.3v101.3c0,0,0,0,0,0c14,0,25.2,11.4,25.2,25.3h285.6 c0,0,0,0,0,0c0-14,11.2-25.3,25.2-25.3V177.3c-7.6,0-14.8-3.4-19.5-9.3"/> <path class="st0" d="M246.6,216c2.5,10.6,1.6,21.8-2.6,31.9c-11,26.5-41.4,39-67.9,28s-39-41.4-28-67.9s41.4-39,67.9-28"/> <path class="st2" d="M472,0l-74.4,0c-4.4,0-8.8,0.5-13.1,1.6l-145,36.3c-6.9,1.7-12.8,6-16.5,12L168,120h104l24.4-24L209,183.3 c-4.5,4.5-7,10.5-7,16.8c0,0,0,0,0,0c0,13.2,10.7,23.8,23.8,23.8h1.1c5.7,0,11.2-2,15.5-5.7l60.7-54.9l29.3,4.5 c30,4.6,58.9-13.1,68.5-41.8l10-30L400,128v72l24.4-19.5c13.4-9.4,23.7-22.6,29.4-37.9l11.4-30.5h6.8"/> </svg>
+                                                    </div>
+                                                    <p class="dv_payment_option_name">cash on delivery </p>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="dv_payment_option_wrapper">
+                                                        <svg class="dv_selected_check_active" x="0px" y="0px" viewBox="0 0 408.576 408.576" style="enable-background:new 0 0 408.576 408.576; fill: #ebebeb; width:25px; height: 25px; margin: 0 auto 15px auto; display: block;" xml:space="preserve"> <g> <g> <path d="M204.288,0C91.648,0,0,91.648,0,204.288s91.648,204.288,204.288,204.288s204.288-91.648,204.288-204.288 S316.928,0,204.288,0z M318.464,150.528l-130.56,129.536c-7.68,7.68-19.968,8.192-28.16,0.512L90.624,217.6 c-8.192-7.68-8.704-20.48-1.536-28.672c7.68-8.192,20.48-8.704,28.672-1.024l54.784,50.176L289.28,121.344 c8.192-8.192,20.992-8.192,29.184,0C326.656,129.536,326.656,142.336,318.464,150.528z"/> </g> </g></g></svg>
+                                                        <svg style="height: 40px; width: 100px; margin: 0 auto; display: block; " version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="128px" height="64.3px" viewBox="0 0 128 64.3" style="overflow:visible;enable-background:new 0 0 128 64.3;" xml:space="preserve"> <style type="text/css"> .st0{fill:#474748;} .st1{fill:#23B053;} </style> <defs> </defs> <path class="st0" d="M0,0.7C0.6,0.2,1.2,0,2,0c3.6,0,7.3,0.1,10.9,0c1.5,0,2.1,0.5,2.1,2C15,4.5,15.1,6.9,15,9.3 c-0.1,1.9,0.6,2.2,2.2,2.1c1.4,0,2-0.3,1.8-1.8c-0.1-0.9,0-1.8,0-2.8c0-1.3,0.5-1.8,1.8-1.7c2.7,0,5.4,0,8.2,0 c1.2,0,1.7,0.5,1.7,1.7c0,0.7,0,1.4,0,2.1c0,2.5,0.9,3.1,3.3,2.5c0.9-0.2,0.7-0.8,0.7-1.3c0-2.6,0.1-5.2,0-7.8C34.5,0.7,35,0,36.7,0 c3.6,0.1,7.2,0.1,10.8,0c1.4,0,2,0.6,2,2c0,3.1,0,6.2,0,9.3c0,0.8-0.2,1.5-0.9,1.9c-0.4,0.3-0.7,0.7-1.1,0.9 c-2.6,1.5-3.7,3.7-3.2,6.7c0.2,1,0,2.1-1.4,2.1c-1.3,0-1.2-1.1-1.3-2c-0.6-3.8,0.5-6.7,3.9-8.7c1-0.6,1.3-1.4,1.2-2.6 c-0.1-1.9-0.1-3.8,0-5.7c0-0.9-0.2-1.2-1.2-1.2c-2.4,0.1-4.7,0.1-7.1,0c-1,0-1.3,0.3-1.3,1.3c0.1,2.6,0,5.3,0,7.9 c0,1.6-0.6,2.2-2.2,2.1c-1.7-0.1-3.5,0-5.2,0c-1.5,0-2.1-0.6-2.1-2.1c0-1.4,0.7-3.4-0.3-3.9c-1.3-0.7-3.3-0.2-4.9-0.3 c-0.8,0-0.9,0.5-0.9,1.1c0,1.1,0,2.2,0,3.3c0,1.3-0.6,1.9-1.9,1.9c-1.9,0-3.7,0-5.6,0c-1.4,0-2-0.6-2-2c0-2.7,0-5.4,0-8.1 c0-1-0.3-1.3-1.3-1.3c-2.4,0.1-4.7,0.1-7.1,0c-1,0-1.2,0.4-1.2,1.3c0.1,2.4,0.1,4.8,0,7.3c0,0.9,0.2,1.6,1,2.1 c3.6,2.3,4.5,5.6,4.3,9.7c-0.2,2.6-0.6,4.7-2.9,6.1c-1.1,0.6-1.3,1.6-1.3,2.8c0.1,4.6,0,9.2,0,13.8c0,1-0.1,2.1-1.4,2.1 c-1.3,0-1.3-1-1.3-2c0-5.1,0.1-10.3,0-15.4c0-1.3,0.6-2.1,1.6-2.7c3.9-2.2,2.3-5.9,2.5-9.1c0-0.7-1-1.2-1.6-1.7 c-1.1-1-2.1-2.2-3.5-3C0,9.5,0,5.1,0,0.7z"/> <path class="st0" d="M84.4,47.9c-5.8,0-10.5-4.6-10.5-10.4c0-5.8,4.7-10.4,10.4-10.5c5.9,0,10.6,4.7,10.6,10.5 C94.9,43.3,90.2,47.9,84.4,47.9z M84.4,31.7c-3.2,0-5.7,2.5-5.7,5.7c0,3.2,2.6,5.8,5.8,5.8c3.1,0,5.7-2.6,5.8-5.7 C90.2,34.3,87.6,31.7,84.4,31.7z"/> <path class="st0" d="M96.9,37.5c0-2.9,0-5.8,0-8.6c0-1.1,0.2-1.7,1.5-1.6c2.7,0.1,5.3,0,8,0c2.9,0,5.2,1.8,6,4.4 c0.8,2.9-0.2,5.5-2.9,7.1c-1.1,0.6-0.9,1.1-0.5,2c1,1.8,2,3.6,3,5.4c0.6,1,0.3,1.5-0.9,1.5c-0.1,0-0.2,0-0.3,0 c-2.4,0.4-3.9-0.4-4.7-2.8c-0.5-1.5-1.5-2.9-2.1-4.3c-0.4-0.9-1.1-0.9-1.8-0.8c-0.9,0.1-0.6,0.9-0.6,1.4c0,1.7-0.1,3.3,0,5 c0.1,1.2-0.5,1.6-1.6,1.6c-3.5-0.1-3,0.3-3.1-3C96.9,42.3,96.9,39.9,96.9,37.5z M104,36c0.6,0,1.1,0,1.5,0c1.6-0.1,2.5-0.9,2.4-2.3 c-0.1-1.5-0.9-2.1-2.4-2.2c-1,0-2.1,0-3.1,0c-0.4,0-0.9-0.1-0.9,0.5c0,1.3-0.2,2.6,0.2,3.7C102,36.4,103.4,35.8,104,36z"/> <path class="st0" d="M60,37.4c0-2.9,0-5.9,0-8.8c0-0.9,0.3-1.3,1.3-1.3c3.5,0,7,0,10.6,0c1,0,1.4,0.3,1.4,1.4 c-0.1,3.4,0.3,2.8-2.8,2.9c-1.5,0-3,0.1-4.5,0c-1,0-1.4,0.2-1.4,1.3c0,2.8-0.1,2.8,2.8,2.8c0.9,0,1.7,0.1,2.6,0 c1.5-0.2,2,0.4,1.9,1.9c-0.1,2.4,0,2.4-2.5,2.4c-1.5,0-3.6-0.6-4.5,0.3c-1,0.9-0.2,2.9-0.3,4.5c0,0.1,0,0.1,0,0.2 c0,2.5-1.4,3.4-3.9,2.6c-0.8-0.3-0.6-0.9-0.6-1.4C60,43.3,60,40.3,60,37.4z"/> <path class="st1" d="M42.8,47.6c-1.1,0.2-1.7-0.3-1.9-1.3c-0.6-2.6-2.2-3.5-4.9-3.1c-1.5,0.2-3.1,0.1-4.7,0c-1.1-0.1-1.7,0.3-2,1.3 c-0.2,0.7-0.6,1.4-0.9,2c-0.5,0.9-2.1,1.5-2.9,1c-0.8-0.5-0.2-1,0-1.5c1.3-3,2.7-6,4.1-8.9c1.4-3,2.7-6,4.1-8.9 c0.2-0.5,0.4-1.2,1.1-1.1c0.6,0,0.7,0.6,1,1.1c2.7,6,5.4,11.9,8.2,17.9C44.6,47.4,44.1,47.8,42.8,47.6z M34.7,32.7 c-1.2,2.6-2.2,4.9-3.2,7.1c-0.3,0.7-0.2,0.9,0.6,0.9c1.7,0,3.5,0,5.2,0c0.8,0,1.1-0.2,0.7-1C36.9,37.5,35.9,35.3,34.7,32.7z"/> <path class="st1" d="M13.3,37.5c0-2.9,0-5.9,0-8.8c0-1,0.3-1.5,1.4-1.4c2.1,0.1,4.2,0,6.2,0c3.5,0.1,6.2,3,6.2,6.4 c0,3.4-2.7,6.3-6.2,6.4c-0.5,0-1,0-1.6,0c-3,0-3,0-3,3.1c0,0.9-0.1,1.7,0,2.6c0.1,1.2-0.2,1.8-1.6,1.8c-1.5,0-1.5-0.8-1.5-1.9 C13.3,43.1,13.3,40.3,13.3,37.5z M18.9,37.4c0.6,0,1.3,0.1,1.9,0c1.8-0.2,3.1-1.5,3.2-3.3c0.2-2.3-1.3-3.7-3.8-3.8 c-3.8-0.2-3.8-0.2-3.8,3c0,0.5,0,1,0,1.5C16.3,37.4,16.3,37.4,18.9,37.4z"/> <path class="st0" d="M123.2,39.4c0,2.3,0,4.6,0,6.9c0,1-0.4,1.3-1.3,1.3c-4.1,0-3.3,0.2-3.3-3.1c0-3.9-0.1-7.7,0-11.6 c0-1.2-0.4-1.6-1.5-1.4c-0.2,0-0.3,0-0.5,0c-2.9,0-3.3-0.5-2.8-3.4c0.1-0.8,0.6-0.8,1.2-0.8c3.9,0,7.8,0,11.8,0 c0.8,0,1.2,0.3,1.2,1.1c0,0.6,0,1.3,0,1.9c0.1,1-0.4,1.2-1.3,1.3c-3.4,0.1-3.4,0.2-3.4,3.5C123.2,36.6,123.2,38,123.2,39.4z"/> <path class="st1" d="M49.8,34.9c1.6-2.3,3.2-4.3,4.6-6.5c0.9-1.4,2.2-1.2,3.3-1c1,0.2,0.3,0.9,0.1,1.3c-1.9,2.6-3.7,5.3-5.6,7.9 c-0.6,0.8-0.9,1.6-0.9,2.7c0.1,2.4,0,4.7,0,7.1c0,1.3-0.7,1.3-1.7,1.3c-1,0-1.5-0.2-1.5-1.4c0.1-2.4,0-4.8,0-7.3 c0-0.9-0.2-1.5-0.7-2.2c-1.8-2.4-3.5-4.9-5.2-7.3c-0.4-0.6-1.4-1.1-0.7-2c0.4-0.6,2.8-0.1,3.3,0.6c1.3,1.8,2.6,3.6,3.9,5.5 C49.1,33.9,49.4,34.3,49.8,34.9z"/> <path class="st0" d="M36.1,56.2c0-0.1,0-0.1,0-0.2c0.5-1-1.1-2.9,0.9-3c1.1,0,2.4-0.9,3.5,0.2c0.5,0.6,0.8-0.1,1.1-0.3 c1.4-0.6,2.5,0,2.6,1.5c0.1,1.4,0,2.8,0,4.1c0,0.7-0.3,0.9-0.9,0.9c-0.7,0-0.8-0.3-0.8-0.9c0-1,0-2.1,0-3.1c0-0.5,0-1.1-0.7-1.1 c-0.6,0-0.8,0.6-0.8,1.1c0,1,0,2,0,2.9c0,0.5,0.1,1-0.8,1c-0.8,0-0.9-0.4-0.9-1.1c0-0.9,0-1.7,0-2.6c0-0.6,0.2-1.5-0.8-1.4 c-0.9,0.1-0.7,0.9-0.7,1.5c0,0.8,0,1.6,0,2.4c0,0.6,0.1,1.2-0.8,1.2c-0.8,0-0.9-0.4-0.9-1.1C36.1,57.6,36.1,56.9,36.1,56.2z"/> <path class="st0" d="M85.6,56.2c0-3.3,0-3.5,3.4-3.4c1.5,0.1,3,0.1,4.5-0.1c1.1-0.1,1.7,0.6,1.8,1.7c0.1,1.4,0,2.8,0,4.1 c0,0.5-0.1,0.9-0.8,0.9c-0.7,0-0.6-0.6-0.6-1c0-1.1,0-2.2,0-3.3c0-0.9-0.3-1.5-1.3-1.4c-0.8,0.1-1.6,0.2-1.6,1.4 c0.1,1.1,0,2.2,0,3.3c0,0.5,0,0.9-0.7,1c-0.7,0-0.7-0.5-0.7-0.9c0-1.2,0-2.3,0-3.5c0-0.8-0.3-1.4-1.2-1.3c-0.8,0.1-1.7,0.1-1.6,1.3 c0,1.1,0,2.3,0,3.5c0,0.5,0,0.9-0.7,0.9c-0.6,0-0.6-0.5-0.6-0.9C85.6,57.8,85.6,57,85.6,56.2z"/> <path class="st0" d="M98.5,59.2c0,0.8,0,1.5,0,2.3c0,0.5-0.3,0.7-0.8,0.7c-0.4,0-0.6-0.3-0.6-0.7c0-2.6,0-5.3,0-7.9 c0-0.2,0.1-0.6,0.3-0.5c1.6,0.6,3.4-1.2,4.8,0.4c1.1,1.1,1.2,2.5,0.8,4C102.6,59.4,101.3,59.9,98.5,59.2z M98.5,56 c-0.1,1.3-0.2,2.5,1.6,2.5c1.6,0,1.8-1.2,1.8-2.4c0-1.2-0.3-2.2-1.7-2.3C98.6,53.7,98.3,54.7,98.5,56z"/> <path class="st0" d="M48,52.7c1.6,0,2.4,0.7,2.6,2.2c0.1,1.1-0.2,2.3,0.3,3.4c0.3,0.6-0.8,1.2-0.9,1.1c-0.9-0.9-1.5,0-2.3,0.1 c-1,0.1-1.9,0-2.2-1.1c-0.3-1.1-0.1-2.1,1-2.6c0.4-0.2,1-0.3,1.5-0.4c0.3-0.1,0.8,0,0.8-0.4c0-0.2-0.1-0.6-0.3-0.8 c-0.3-0.3-0.7-0.2-1.1,0.1c-0.1,0.1-0.2,0.3-0.3,0.4c-0.5,0.4-1.1,0.3-1.4,0c-0.4-0.4,0.1-0.8,0.4-1.2C46.5,52.9,47.3,52.8,48,52.7z M48.8,57c0-0.4-0.1-0.7-0.6-0.6c-0.7,0-1.1,0.3-1.1,1c0,0.5,0.1,0.8,0.7,0.8C48.5,58.2,48.7,57.6,48.8,57z"/> <path class="st0" d="M32.1,52.7c1.8,0,2.5,0.7,2.6,2.4c0,1-0.2,2.1,0.3,3c0.4,0.7-0.7,1.3-0.8,1.2c-1-0.8-1.9,0.2-2.8,0.2 c-1,0-1.7-0.4-1.9-1.4c-0.2-1,0.2-1.8,1.1-2.3c0.4-0.2,1-0.3,1.5-0.4c0.3-0.1,0.9,0.1,0.9-0.5c0-0.3-0.1-0.6-0.4-0.7 c-0.4-0.2-0.8-0.1-1.1,0.2c-0.1,0.1-0.2,0.2-0.2,0.3c-0.4,0.6-1,0.4-1.4,0.1c-0.4-0.4,0-0.8,0.3-1.2C30.8,52.9,31.6,52.8,32.1,52.7z M33,57c0-0.4,0-0.7-0.5-0.7c-0.7,0.1-1.2,0.4-1.2,1.2c0,0.5,0.3,0.8,0.8,0.7C32.7,58.1,33,57.6,33,57z"/> <path class="st0" d="M53.9,61.1c-3.4,4.7-14.2,4.1-18.8-0.8C41.2,63.3,47.3,63.7,53.9,61.1z"/> <path class="st0" d="M63.4,56.1c0-0.4,0-0.8,0-1.2c0-1.1-0.4-2.8,1.8-1.7c0.2,0.1,0.6-0.3,0.9-0.3c1.2-0.2,2.1,0.2,2.2,1.5 c0.1,1.4,0,2.9,0.1,4.3c0,0.6-0.2,0.8-0.8,0.8c-0.6,0-0.9-0.2-0.9-0.8c0-1.1,0-2.2,0-3.3c0-0.5,0-1-0.6-1.1c-0.7,0-0.8,0.5-0.9,1.1 c0,1-0.1,2.1,0,3.1c0,0.6-0.2,1-0.9,1c-0.8,0-0.8-0.4-0.8-1C63.5,57.7,63.4,56.9,63.4,56.1z"/> <path class="st0" d="M62.5,56.1c0,2.1-1,3.4-2.7,3.4c-1.6,0-2.7-1.3-2.7-3.3c0-2.1,1.1-3.5,2.8-3.5C61.4,52.8,62.5,54.1,62.5,56.1z M60.8,56.3c-0.1-0.9,0.2-2.2-0.9-2.2c-1.2,0-0.8,1.3-0.9,2.1c0,0.4,0,0.9,0.1,1.3c0.1,0.4,0.3,0.6,0.7,0.7c0.5,0.1,0.8-0.3,0.9-0.7 C60.7,57.1,60.7,56.6,60.8,56.3z"/> <path class="st0" d="M109.9,56.7c0,0.5,0,1,0,1.6c0,0.9,0,1.6-1.2,0.9c-0.5-0.3-0.8,0.2-1.3,0.3c-0.9,0.1-1.9,0.3-2.5-0.6 c-0.5-0.6-0.6-1.3-0.3-1.9c0.4-1,1.2-1.2,2.2-1.3c0.6-0.1,1.9,0.8,1.7-0.8c-0.1-1.3-1.2-1.1-2.1-1c-0.5,0-1.3,0.6-1.4-0.2 c-0.1-0.7,0.8-0.7,1.3-0.8C109.1,52.2,109.9,53.1,109.9,56.7z M107.3,56.5c-0.7,0.1-1.4,0.1-1.5,1.1c0,0.8,0.5,1,1.1,1 c0.7-0.1,1.6,0,1.7-1.1C108.7,56.4,107.9,56.6,107.3,56.5z"/> <path class="st0" d="M18.3,56.7c0,0.5,0,1,0,1.5c0,0.8,0.1,1.7-1.2,1c-0.6-0.3-1,0.3-1.6,0.4c-1.3,0.1-2.3-0.1-2.6-1.6 c-0.2-1.2,0.7-2.2,2.2-2.3c0.3,0,0.6,0,0.9,0c0.5,0,1.1,0.3,1.1-0.6c0-0.7-0.3-1.2-0.9-1.2c-0.6-0.1-1.1,0.1-1.7,0.1 c-0.4,0-0.9,0.3-1-0.3c-0.1-0.5,0.4-0.6,0.8-0.7c2.7-0.8,4.1,0.1,4.1,2.9C18.3,56.1,18.3,56.4,18.3,56.7z M15.8,56.5 c-0.8,0.1-1.6,0.1-1.6,1.2c0,0.7,0.6,1,1.2,0.9c0.7-0.1,1.5-0.1,1.6-1.2C17.1,56.5,16.4,56.6,15.8,56.5z"/> <path class="st0" d="M84,56.2c0,2.2-1.1,3.5-3.1,3.5c-2,0-3.2-1.2-3.2-3.4c0-2.2,1.2-3.5,3.1-3.5C82.8,52.7,84,54,84,56.2z M82.6,56.4c0-1.5-0.3-2.6-1.9-2.6c-1.4,0.1-1.7,1.1-1.7,2.3c0,1.2,0.2,2.4,1.8,2.4C82.5,58.5,82.6,57.3,82.6,56.4z"/> <path class="st0" d="M118.9,52.8c2.2,0.8,1.4,3.5,2.9,5c0.5-1.3,1-2.6,1.4-4c0.2-0.6,0.6-1.1,1.2-0.8c0.6,0.3,0.1,0.8,0,1.2 c-0.8,2.2-1.7,4.4-2.6,6.6c-0.4,1-1,1.7-2.2,1.5c-0.4,0-0.7-0.1-0.8-0.5c-0.1-0.5,0.4-0.4,0.7-0.5c1.4-0.3,1.7-1.3,1.2-2.5 c-0.7-1.9-1.5-3.7-2.3-5.6C118.5,53,118.7,52.9,118.9,52.8z"/> <path class="st0" d="M111.7,56.1c0-0.6,0-1.3,0-1.9c0-0.9-0.1-1.8,1.3-1c0.6,0.4,1.2-0.3,1.8-0.4c1.8-0.3,2.7,0.3,2.8,2.1 c0,1.2,0,2.4,0,3.6c0,0.5,0,0.9-0.7,1c-0.7,0-0.7-0.5-0.7-0.9c0-1.1,0-2.2,0-3.3c0-0.9-0.3-1.5-1.3-1.4c-0.9,0.1-1.9,0.1-1.9,1.5 c0,1,0,2.1,0,3.1c0,0.5,0.1,1.1-0.7,1.1c-0.8,0-0.6-0.7-0.6-1.1C111.7,57.6,111.7,56.8,111.7,56.1z"/> <path class="st0" d="M20.2,56.2c0-0.5-0.1-0.9,0-1.4c0.1-0.8-0.7-2.6,1.5-1.5c0.4,0.2,1-0.4,1.6-0.5c1.7-0.4,2.6,0.3,2.7,2 c0.1,1.2,0,2.4,0,3.6c0,0.5,0.1,1.1-0.7,1.1c-0.7,0-0.6-0.6-0.6-1c0-1,0-2.1,0-3.1c0-0.9-0.2-1.7-1.3-1.5c-0.9,0.1-1.9,0.1-1.8,1.5 c0.1,1.1,0,2.2,0,3.3c0,0.4,0,0.8-0.6,0.8c-0.6,0-0.8-0.4-0.8-0.9C20.2,57.8,20.2,57,20.2,56.2z"/> <path class="st0" d="M54,54.5c-0.6-0.6-2,0.4-1.9-1c0.1-1.3,1.3-0.6,1.9-0.6c0.8,0,1.9-0.5,2.3,0.4c0.4,0.9-0.5,1.6-1,2.2 c-0.8,1-1.4,1.9,0.6,2.1c0.6,0.1,0.8,0.7,0.6,1.2c-0.2,0.7-0.8,0.2-1.1,0.1c-0.8-0.2-1.6-0.2-2.4,0c-0.4,0.1-0.8,0.5-1.1,0.1 c-0.3-0.4-0.2-1,0.1-1.5C52.6,56.5,53.3,55.5,54,54.5z"/> <path class="st0" d="M75.2,59.6c-2.3,0-3.5-1.4-3.4-3.7c0.2-2.2,1.6-3.4,3.7-3c0.5,0.1,1.2,0,1.1,0.8c-0.1,0.7-0.7,0.3-1.1,0.3 c-1.7,0-2.3,0.6-2.3,2.3c0,1.4,0.4,2.3,2,2.4c0.5,0,1.4-0.6,1.4,0.3C76.7,59.8,75.6,59.3,75.2,59.6z"/> <path class="st0" d="M52,60.4c1.1-0.7,2.6-1.2,3.4-0.3c0.8,1-0.2,2.3-1.2,3.5C54.5,60.5,54.5,60.5,52,60.4z"/> </svg>
+                                                    </div>
+                                                    <p class="dv_payment_option_name">payfort </p>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="dv_payment_option_wrapper">
+                                                        <svg class="dv_selected_check_active" x="0px" y="0px" viewBox="0 0 408.576 408.576" style="enable-background:new 0 0 408.576 408.576; fill: #ebebeb; width:25px; height: 25px; margin: 0 auto 15px auto; display: block;" xml:space="preserve"> <g> <g> <path d="M204.288,0C91.648,0,0,91.648,0,204.288s91.648,204.288,204.288,204.288s204.288-91.648,204.288-204.288 S316.928,0,204.288,0z M318.464,150.528l-130.56,129.536c-7.68,7.68-19.968,8.192-28.16,0.512L90.624,217.6 c-8.192-7.68-8.704-20.48-1.536-28.672c7.68-8.192,20.48-8.704,28.672-1.024l54.784,50.176L289.28,121.344 c8.192-8.192,20.992-8.192,29.184,0C326.656,129.536,326.656,142.336,318.464,150.528z"/> </g> </g></g></svg>
+                                                        <svg style="height: 40px; width: 100px; margin: 0 auto; display: block; " version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="216.4px" height="77.4px" viewBox="0 0 216.4 77.4" style="overflow:visible;enable-background:new 0 0 216.4 77.4;" xml:space="preserve"> <style type="text/css"> .st0installment{fill:none;stroke:#ED1D1D;stroke-width:2;stroke-miterlimit:10;} .st1installment{fill:#EC2224;} </style> <defs> </defs> <rect x="1" y="1" class="st0installment" width="214.4" height="75.4"/> <g> <path class="st1installment" d="M16.1,63.9V44.8h4.1v19.1H16.1z"/> <path class="st1installment" d="M41.9,63.9h-5.2l-8.3-14.5h-0.1c0.2,2.6,0.2,4.4,0.2,5.5v9h-3.6V44.8H30l8.3,14.3h0.1 c-0.1-2.5-0.2-4.2-0.2-5.3v-9.1h3.7V63.9z"/> <path class="st1installment" d="M58,58.6c0,1.7-0.6,3.1-1.9,4.1c-1.2,1-3,1.5-5.2,1.5c-2,0-3.8-0.4-5.4-1.2v-3.8c1.3,0.6,2.4,1,3.3,1.2 c0.9,0.2,1.7,0.4,2.5,0.4c0.9,0,1.6-0.2,2-0.5s0.7-0.8,0.7-1.5c0-0.4-0.1-0.7-0.3-1c-0.2-0.3-0.5-0.6-0.9-0.8 c-0.4-0.3-1.2-0.7-2.5-1.3c-1.2-0.5-2-1.1-2.6-1.6c-0.6-0.5-1.1-1.1-1.4-1.8s-0.5-1.5-0.5-2.4c0-1.7,0.6-3,1.7-4s2.7-1.5,4.8-1.5 c1,0,1.9,0.1,2.8,0.4c0.9,0.2,1.8,0.6,2.8,1L56.6,49c-1-0.4-1.9-0.7-2.5-0.9c-0.7-0.2-1.3-0.2-2-0.2c-0.8,0-1.4,0.2-1.8,0.5 c-0.4,0.4-0.6,0.8-0.6,1.4c0,0.4,0.1,0.7,0.2,0.9c0.2,0.3,0.4,0.5,0.8,0.8c0.4,0.2,1.2,0.7,2.6,1.3c1.8,0.9,3,1.7,3.7,2.6 C57.7,56.3,58,57.3,58,58.6z"/> <path class="st1installment" d="M68.8,63.9h-4.1V48.1h-5.2v-3.4H74v3.4h-5.2V63.9z"/> <path class="st1installment" d="M88.7,63.9l-1.4-4.6h-7l-1.4,4.6h-4.4l6.8-19.2h5l6.8,19.2H88.7z M86.3,55.9c-1.3-4.1-2-6.5-2.2-7 c-0.2-0.5-0.3-1-0.3-1.3c-0.3,1.1-1.1,3.9-2.5,8.3H86.3z"/> <path class="st1installment" d="M95.5,63.9V44.8h4.1v15.8h7.8v3.3H95.5z"/> <path class="st1installment" d="M110.6,63.9V44.8h4.1v15.8h7.8v3.3H110.6z"/> <path class="st1installment" d="M133.8,63.9l-4.6-15h-0.1c0.2,3.1,0.2,5.1,0.2,6.1v8.9h-3.6V44.8h5.5l4.5,14.6h0.1l4.8-14.6h5.5v19.1h-3.8 v-9.1c0-0.4,0-0.9,0-1.5c0-0.6,0.1-2,0.2-4.4h-0.1l-4.9,15H133.8z"/> <path class="st1installment" d="M162,63.9h-11V44.8h11v3.3h-7v4.2h6.5v3.3h-6.5v4.9h7V63.9z"/> <path class="st1installment" d="M183,63.9h-5.2l-8.3-14.5h-0.1c0.2,2.6,0.2,4.4,0.2,5.5v9H166V44.8h5.1l8.3,14.3h0.1c-0.1-2.5-0.2-4.2-0.2-5.3 v-9.1h3.7V63.9z"/> <path class="st1installment" d="M195.2,63.9h-4.1V48.1h-5.2v-3.4h14.4v3.4h-5.2V63.9z"/> </g> <g> <path d="M88,20.8c0,1.5-0.5,2.6-1.4,3.3c-0.9,0.8-2.2,1.2-3.9,1.2h-1.2v4.8h-2.9V16.6H83c1.6,0,2.9,0.4,3.8,1.1 C87.6,18.4,88,19.4,88,20.8z M81.5,23h0.9c0.9,0,1.5-0.2,2-0.5c0.4-0.3,0.7-0.9,0.7-1.5c0-0.7-0.2-1.2-0.6-1.5 c-0.4-0.3-0.9-0.5-1.7-0.5h-1.3V23z"/> <path d="M98.9,30.2l-1-3.2h-4.9l-1,3.2h-3.1l4.8-13.6h3.5l4.8,13.6H98.9z M97.2,24.5c-0.9-2.9-1.4-4.6-1.5-5 c-0.1-0.4-0.2-0.7-0.2-0.9c-0.2,0.8-0.8,2.8-1.8,5.9H97.2z"/> <path d="M107.9,22.2l2.8-5.6h3.1l-4.5,8.3v5.3h-2.9V25l-4.5-8.4h3.1L107.9,22.2z"/> <path d="M120.5,16.6h4.2c1.9,0,3.3,0.3,4.2,0.8c0.9,0.5,1.3,1.4,1.3,2.6c0,0.8-0.2,1.5-0.6,2c-0.4,0.5-0.9,0.8-1.5,0.9v0.1 c0.9,0.2,1.5,0.6,1.9,1.1c0.4,0.5,0.6,1.2,0.6,2.1c0,1.2-0.4,2.2-1.3,2.9s-2.1,1-3.6,1h-5.1V16.6z M123.3,22h1.7 c0.8,0,1.3-0.1,1.7-0.4c0.3-0.2,0.5-0.6,0.5-1.2c0-0.5-0.2-0.9-0.6-1.1c-0.4-0.2-1-0.3-1.8-0.3h-1.5V22z M123.3,24.3v3.5h1.9 c0.8,0,1.4-0.2,1.8-0.5c0.4-0.3,0.6-0.8,0.6-1.4c0-1.1-0.8-1.7-2.4-1.7H123.3z"/> <path d="M137.4,22.2l2.8-5.6h3.1l-4.5,8.3v5.3H136V25l-4.5-8.4h3.1L137.4,22.2z"/> </g> </svg>
+                                                    </div>
+                                                    <p class="dv_payment_option_name">Installment </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card mb-3">
+                                        <div class="card-header"><strong>Status </strong></div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group mb-0">
+                                                        <label class="text-muted text-capitalize d-block" for="name">Payment status </label>
+                                                        <label class="ui-switch ui-switch-md info m-t-xs float-left mr-3 mt-2"><input checked="" type="checkbox"> <i></i></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 text-center">
+                                    <button type="button" class="btn btn-default text-muted dv_cancel_submit_btn">cancel</button>
+                                    <button type="button" class="btn btn-default dv_save_submit_btn">save </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ############ Main END-->
+            </div>
+            <!-- ############ Content END-->
+        </div>
+
+        <div class="modal fade right" id="addpaymentpopup">
+            <div class="modal-dialog modal-md">
+              <div class="card">
+                  <div class="card-header">
+                      Add New Payment Method
+                  </div>
+                  <div class="card-body">
+
+                    <div class="form-group">
+                        <label class="text-muted text-capitalize" for="name">Payment Method Name </label>
+                        <input type="text" class="form-control dv_common_input_for_all" placeholder="Enter">
+                    </div>
+                    <div class="form-group">
+                        <label class="text-muted text-capitalize" for="name">Payment SVG Icon </label>
+                        <textarea class="form-control dv_common_textarea_for_all" rows="6" style="resize: none;" placeholder="Enter"></textarea>
+                    </div>
+
+                    <div class="col-md-12 text-center">
+                        <button type="button" class="btn btn-default text-muted dv_cancel_submit_btn mr-3" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-default dv_save_submit_btn">Add </button>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="show-mobile-991 dv_fixed_bottom_bar">
+            <ul>
+                <li>
+                    <a href="javascript:void(0);" class="active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                        Sales
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                        Orders
+                        <span>02</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                        Inventory
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" data-toggle="modal" data-target="#asides">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-right"><line x1="21" y1="10" x2="7" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="7" y2="18"></line></svg>
+                        Menu
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+		<script src="js/site.min.js"></script>
+		<script src="js/typeahead.bundle.min.js"></script>
+        <script src="js/select2.min.js"></script>
+        <script src="js/select2.js"></script>
+
+    </body>
+</html>

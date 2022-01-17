@@ -1,0 +1,154 @@
+<div class="grid">
+    <div class="col-12">
+        <p-breadcrumb [model]="breadcrumbItems" [home]="{icon: 'pi pi-home'}" class="p-breadcrumb"></p-breadcrumb>
+    </div>
+    <div class="col-12">
+        <div class="card">
+            <div class="p-fluid p-formgrid grid">
+                <div class="field col-12 md:col-1">
+                    <div class="image-circle-model">
+                        <!-- <img src="../../../../../assets/img/avtar2.png" class="avatar" alt="Avatar"> -->
+                        <img src="assets\\layout\\images\\avtar2.png" class="avatar-model" alt="Avatar">
+                    </div>
+                </div>
+                <div class="field col-12 md:col-1">
+                    <label htmlFor="Mrn">MRN</label>
+                    <input pInputText id="Mrn" type="text" />
+                </div>
+                <div class="field col-12 md:col-2">
+                    <label htmlFor="fname">First Name</label>
+                    <input pInputText id="fname" type="text" />
+                </div>
+                <div class="field col-12 md:col-2">
+                    <label htmlFor="mname">Middle Name</label>
+                    <input pInputTextarea id="mname" rows="4" />
+                </div>
+                <div class="field col-12 md:col-2">
+                    <label htmlFor="fmname">Family Name</label>
+                    <input pInputTextarea id="fmname" rows="4" />
+                </div>
+                <div class="field col-12 md:col-1">
+                    <label htmlFor="dob">DOB</label>
+                    <p-calendar p-inputtext [(ngModel)]="value" showButtonBar="true" dateFormat="dd/mm/yy"></p-calendar>
+                    <!-- <input pInputTextarea id="dob" rows="4" /> -->
+                </div>
+                <div class="field col-12 md:col-1">
+                    <label htmlFor="nationality">Nationality</label>
+                    <input pInputText id="nationality" type="text" />
+                </div>
+                <div class="field col-12 md:col-2">
+                    <label htmlFor="mobile">Mobile</label>
+                    <input pInputText id="mobile" type="text" />
+                </div>
+            </div>
+            <div class="col-12 text-right">
+                <button pButton pRipple type="submit" label="Submit" class="mr-2 mb-2" (click)="submitPatient()"></button>
+                <button pButton pRipple label="Clear" class="mr-2 mb-2"></button>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-12" *ngIf="patientflag">
+        <div class="card">
+            <p-tabView orientation="left">
+                <p-tabPanel header="Personal Detail" class="line-height-3 m-0">
+                    <div class="grid">
+                        <div class="col-12 md:col-8">
+                            <div class="p-fluid p-formgrid grid">
+                                <div class="field col-12 md:col-4">
+                                    <label htmlFor="fname ">First Name</label>
+                                    <input pInputText id="fname " type="text " />
+                                </div>
+                                <div class="field col-12 md:col-4">
+                                    <label htmlFor="mname ">Middle Name</label>
+                                    <input pInputTextarea id="mname " rows="4 " />
+                                </div>
+                                <div class="field col-12 md:col-4">
+                                    <label htmlFor="fmname ">Family Name</label>
+                                    <input pInputTextarea id="fmname " rows="4 " />
+                                </div>
+
+                                <div class="field col-12 md:col-4">
+                                    <label htmlFor="gender ">Gender</label>
+                                    <input pInputText id="gender " type="text " />
+                                </div>
+
+                                <div class="field col-12 md:col-4">
+                                    <label htmlFor="eth ">Ethnicity</label>
+                                    <input pInputText id="eth " type="text " />
+                                </div>
+                                <div class="field col-12 md:col-4">
+                                    <label htmlFor="cs ">Civil Status</label>
+                                    <input pInputText id="gender " type="text " />
+                                </div>
+
+                                <div class="field col-12 md:col-4">
+                                    <label htmlFor="bg ">Blood Group</label>
+                                    <input pInputText id="bg " type="text " />
+                                </div>
+                                <div class="field col-12 md:col-4">
+                                    <label htmlFor="ps ">Passport</label>
+                                    <input pInputText id="ps " type="text " />
+                                </div>
+
+                                <div class="field col-12 md:col-4">
+                                    <label htmlFor="vs ">Visa Type</label>
+                                    <input pInputText id="vs " type="text " />
+                                </div>
+                                <div class="field col-12 md:col-4">
+                                    <label htmlFor="eid ">Emirates Id</label>
+                                    <input pInputText id="eid " type="text " />
+                                </div>
+
+                                <div class="field col-12 md:col-4">
+                                    <label htmlFor="ed ">Expiry Date</label>
+                                    <p-calendar p-inputtext [(ngModel)]="value" showButtonBar="true" dateFormat="dd/mm/yy"></p-calendar>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 md:col-4">
+                            <div class="card">
+                                <div class="p-fluid p-formgrid grid">
+                                    <div class="field col-12 md:col-12">
+                                        <label htmlFor="add ">Address</label>
+                                        <input pInputText id="add " type="text " />
+                                    </div>
+                                    <div class="field col-12 md:col-6">
+                                        <label htmlFor="city ">City</label>
+                                        <input pInputTextarea id="city " rows="4 " />
+                                    </div>
+                                    <div class="field col-12 md:col-6">
+                                        <label htmlFor="country ">Country</label>
+                                        <input pInputTextarea id="country " rows="4 " />
+                                    </div>
+                                    <div class="field col-12 md:col-6">
+                                        <label htmlFor="po ">PO Box</label>
+                                        <input pInputTextarea id="po " rows="4 " />
+                                    </div>
+                                    <div class="field col-12 md:col-6">
+                                        <label htmlFor="contact ">#Contact</label>
+                                        <input pInputTextarea id="contact " rows="4 " />
+                                    </div>
+                                    <div class="field col-12 md:col-12">
+                                        <label htmlFor="email ">Email</label>
+                                        <input pInputTextarea id="email " rows="4 " />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 text-right">
+                            <button pButton pRipple type="Save" label="Save" class="mr-2 mb-2"></button>
+                            <button pButton pRipple label="Clear" class="mr-2 mb-2"></button>
+                        </div>
+                    </div>
+                </p-tabPanel>
+                <p-tabPanel header="Next Of Kin " class="line-height-3 m-0 ">2
+                </p-tabPanel>
+                <p-tabPanel header="Payment Option " class="line-height-3 m-0 ">3
+                </p-tabPanel>
+                <p-tabPanel header="Episodes " class="line-height-3 m-0 ">4
+                </p-tabPanel>
+            </p-tabView>
+        </div>
+    </div>
+</div>

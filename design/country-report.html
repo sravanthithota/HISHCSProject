@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Country Report </title>
+        <meta name="description" content="" />
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+        <!-- style -->
+        <link rel="stylesheet" href="css/site.min.css" />
+    </head>
+    <body class="layout-column">
+        <header class="page-header bg-white box-shadow sticky">
+            <div class="navbar navbar-expand-lg">
+                <!-- brand -->
+                <a href="#!" class="navbar-brand">
+                    <span class="hidden-folded d-inline l-s-n-1x m-0">
+                        <svg version="1.1" class="dv_logo_main" enable-background="new 0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 685 168" style="width: 170px; margin: 0; position: relative; top: 0;"> <g> <g> <path d="M104.2,4v96.2H83.6l0.5-64.8L54.8,77.3h-5.7l-29-40.9l0.5,63.8H0.1L0.1,4h21.1L52,50.5L82.6,4H104.2z"></path> <path d="M124.7,4h20.7v96.2h-20.7V4z"></path> <path d="M233.6,100.2l-29-35.2h-17.9v35.2H166V4h47.7c9.8,0,17.8,2.8,23.9,8.3s9.2,12.9,9.2,22c0,6.3-1.8,12-5.5,16.9 c-3.7,5-8.7,8.6-15,11l32.2,38H233.6z M186.7,47.7h24.1c4.5,0,8.1-1.2,10.7-3.6c2.7-2.4,4-5.5,4-9.5c0-4.2-1.3-7.5-4-9.8 c-2.7-2.3-6.3-3.5-10.7-3.5h-24.1V47.7z"></path> <path d="M335,100.2L306,65H288v35.2h-20.7V4h47.7c9.8,0,17.8,2.8,23.9,8.3c6.1,5.5,9.2,12.9,9.2,22c0,6.3-1.8,12-5.5,16.9 c-3.7,5-8.7,8.6-15,11l32.2,38H335z M288,47.7h24.1c4.5,0,8.1-1.2,10.7-3.6c2.7-2.4,4-5.5,4-9.5c0-4.2-1.3-7.5-4-9.8 c-2.7-2.3-6.3-3.5-10.7-3.5H288V47.7z"></path> <path d="M378,86.6c-9.7-9.1-14.5-20.6-14.5-34.5s4.8-25.4,14.5-34.5C387.6,8.5,399.9,4,414.7,4c14.9,0,27.1,4.5,36.7,13.6 c9.6,9.1,14.4,20.6,14.4,34.5s-4.8,25.4-14.4,34.5c-9.6,9.1-21.9,13.6-36.7,13.6C399.9,100.2,387.6,95.7,378,86.6z M436.1,73.9 c5.7-5.7,8.5-13,8.5-21.8s-2.8-16-8.5-21.8c-5.7-5.7-12.8-8.6-21.4-8.6c-8.7,0-15.9,2.9-21.6,8.6c-5.7,5.7-8.5,13-8.5,21.8 s2.8,16,8.5,21.8c5.7,5.7,12.9,8.6,21.6,8.6C423.3,82.5,430.5,79.6,436.1,73.9z"></path> <path d="M547.6,100.2l-29-35.2h-17.9v35.2h-20.7V4h47.7c9.8,0,17.8,2.8,23.9,8.3s9.2,12.9,9.2,22c0,6.3-1.8,12-5.5,16.9 c-3.7,5-8.7,8.6-15,11l32.2,38H547.6z M500.6,47.7h24.1c4.5,0,8.1-1.2,10.7-3.6c2.7-2.4,4-5.5,4-9.5c0-4.2-1.3-7.5-4-9.8 c-2.7-2.3-6.3-3.5-10.7-3.5h-24.1V47.7z"></path> <path d="M577.1,92.3l5.8-17.9c10.8,6.4,22,9.6,33.6,9.6c5.2,0,9.3-0.9,12.5-2.7c3.1-1.8,4.7-4.6,4.7-8.4c0-3.1-1.7-5.4-5.2-7 c-3.5-1.6-10.1-3.5-19.8-5.8c-3.3-0.8-6.2-1.6-8.7-2.4c-2.5-0.8-5.2-2-8.1-3.5c-2.9-1.5-5.4-3.3-7.2-5.3c-1.9-2-3.5-4.5-4.7-7.6 c-1.3-3.1-1.9-6.5-1.9-10.3c0-9.3,3.6-16.5,10.7-21.6C595.7,4.5,605,2,616.5,2c11.8,0,23,2.7,33.6,8.2l-6.5,17 c-9.1-4.9-18.6-7.4-28.5-7.4c-5.1,0-9,0.8-11.8,2.5c-2.8,1.7-4.2,4-4.2,7c0,3,1.6,5.3,4.8,6.9c3.2,1.6,8.7,3.3,16.4,5.1 c3.9,0.9,7.1,1.7,9.8,2.5c2.6,0.8,5.7,2,9.1,3.6c3.4,1.6,6.2,3.4,8.2,5.3c2.1,1.9,3.8,4.5,5.3,7.6c1.4,3.1,2.2,6.7,2.2,10.6 c0,9.6-3.8,17.2-11.3,22.8c-7.5,5.6-17.1,8.4-28.8,8.4C602.3,102.2,589.6,98.9,577.1,92.3z"></path> </g> <g> <path d="M3.9,130.6H15c3.2,0,5.6,0.7,7.3,2.1c1.7,1.4,2.6,3.3,2.6,5.8c0,1.8-0.5,3.3-1.4,4.6s-2.1,2.1-3.6,2.4 c2.2,0.4,3.9,1.2,5.1,2.4c1.2,1.2,1.8,2.8,1.8,4.7c0,2.6-1,4.6-3.1,6c-2.1,1.4-4.9,2.1-8.6,2.1H3.9V130.6z M16,144.4 c1.9,0,3.4-0.5,4.4-1.5c1.1-1,1.6-2.5,1.6-4.3c0-1.8-0.6-3.1-1.9-4c-1.2-0.9-3-1.4-5.3-1.4H6.6v11.3H16z M15.1,158.2 c2.8,0,5-0.5,6.5-1.4c1.5-0.9,2.3-2.3,2.3-4.2c0-1.8-0.7-3.2-2.1-4.2s-3.3-1.5-5.9-1.5H6.6v11.3H15.1z"></path> <path d="M78.9,158.2v2.5H57.8v-30h21.1v2.5H60.5v11.5h16.6v2.5H60.5v11.1H78.9z"></path> <path d="M120,130.6h2.9l13,30h-3l-3.2-7.6h-16.5l-3.2,7.6H107L120,130.6z M128.7,150.6l-7.2-16.9l-7.3,16.9H128.7z"></path> <path d="M168.2,158.2c-2.1-2-3.1-4.9-3.1-8.5v-19.1h2.7v19.1c0,2.9,0.8,5.2,2.4,6.7c1.6,1.5,3.9,2.3,6.9,2.3c3,0,5.3-0.8,7-2.3 c1.6-1.5,2.5-3.8,2.5-6.7v-19.1h2.7v19.1c0,3.7-1.1,6.5-3.2,8.5c-2.1,2-5.1,3-9,3C173.3,161.2,170.3,160.2,168.2,158.2z"></path> <path d="M244.8,133.1h-11.5v27.5h-2.7v-27.5h-11.5v-2.5h25.7V133.1z"></path> <path d="M283.1,148l-11.8-17.3h3.1l10.1,15l10.1-15h3.1L285.9,148v12.7h-2.7L283.1,148z"></path> <path d="M361.2,130.6h2.7v27.5h17.6v2.5h-20.3V130.6z"></path> <path d="M414,156.8c-2.9-2.9-4.3-6.7-4.3-11.2s1.4-8.3,4.3-11.2c2.9-2.9,6.5-4.4,10.9-4.4c4.4,0,8,1.5,10.9,4.4 c2.9,2.9,4.3,6.7,4.3,11.2s-1.4,8.3-4.3,11.2c-2.9,2.9-6.5,4.4-10.9,4.4C420.5,161.2,416.9,159.8,414,156.8z M433.7,155 c2.3-2.5,3.5-5.6,3.5-9.4s-1.2-6.9-3.5-9.4c-2.3-2.5-5.3-3.7-8.8-3.7c-3.6,0-6.5,1.2-8.9,3.7c-2.3,2.5-3.5,5.6-3.5,9.4 s1.2,6.9,3.5,9.4c2.3,2.5,5.3,3.7,8.9,3.7C428.5,158.7,431.4,157.5,433.7,155z"></path> <path d="M473.8,158.2c-2.1-2-3.1-4.9-3.1-8.5v-19.1h2.7v19.1c0,2.9,0.8,5.2,2.4,6.7c1.6,1.5,3.9,2.3,6.9,2.3c3,0,5.3-0.8,7-2.3 c1.6-1.5,2.5-3.8,2.5-6.7v-19.1h2.7v19.1c0,3.7-1.1,6.5-3.2,8.5c-2.1,2-5.1,3-9,3C478.8,161.2,475.9,160.2,473.8,158.2z"></path> <path d="M551.7,130.6v30h-2.6l-19.7-25.8v25.8h-2.7v-30h2.6l19.6,25.7v-25.7H551.7z"></path> <path d="M586.5,157.1c-2.9-2.8-4.3-6.5-4.3-11.2c0-4.9,1.4-8.7,4.4-11.6c3-2.8,6.8-4.3,11.6-4.3c3.4,0,6.7,0.8,9.8,2.4l-0.9,2.4 c-2.7-1.6-5.6-2.3-8.8-2.3c-3.9,0-7.1,1.2-9.6,3.6c-2.5,2.4-3.7,5.6-3.7,9.7c0,3.9,1.2,7.1,3.6,9.4c2.4,2.3,5.5,3.5,9.3,3.5 c2.6,0,5.4-0.6,8.2-1.9l0-8.8h-9v-2.5h11.7v12.8c-4.1,1.9-7.8,2.9-11.2,2.9C593.1,161.2,589.3,159.8,586.5,157.1z"></path> <path d="M661.1,158.2v2.5H640v-30h21.1v2.5h-18.4v11.5h16.6v2.5h-16.6v11.1H661.1z"></path> </g> </g>                       </svg>
+                    </span>
+                </a>
+                
+                <button type="button" class="btn btn-default dv_logout_btn">
+                    <i data-feather="log-out"></i>
+                    logout
+                </button>
+            </div>
+        </header>
+        <div id="main" class="layout-row flex">
+            <!-- ############ Aside START-->
+            <div id="asides" class="page-sidenav no-shrink bg-white nav-dropdown fade sticky" aria-hidden="true">
+                <div class="sidenav h-100 modal-dialog bg-white">
+                    <!-- sidenav top --><!-- Flex nav content -->
+                    <div class="flex scrollable hover">
+                        <div class="nav-active-text-primary" data-nav>
+                            <ul class="nav">
+                                <li>
+                                    <a href="dashboard.html">
+                                        <span class="nav-icon"><i data-feather="home"></i></span> <span class="nav-text">Dashboard</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">catalogue</span> <span class="nav-caret"></span>
+                                    </a>
+                                    <ul class="nav-sub nav-mega">
+                                        <li><a href="brands.html"><span class="nav-text">brands</span></a></li>
+                                        <li><a href="category.html"><span class="nav-text">category</span></a></li>
+                                        <li><a href="sub-category.html"><span class="nav-text">sub category</span></a></li>
+                                        <li><a href="filter-management.html"><span class="nav-text">filter management</span></a></li>
+                                        <li><a href="products.html"><span class="nav-text">product management</span></a></li>
+                                        <li><a href="product-reviews.html"><span class="nav-text">product review</span></a></li>
+                                        <li><a href="locations.html"><span class="nav-text">location</span></a></li>
+                                        <li><a href="stock-transfer.html"><span class="nav-text">stock transfer</span></a></li>
+                                        <li><a href="upload-download-excel.html"><span class="nav-text">upload / download </span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">sales</span> <span class="nav-caret"></span>
+                                    </a>
+                                    <ul class="nav-sub nav-mega">
+                                        <li><a href="#!"><span class="nav-text">order management</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">incomplete orders</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">shipment</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">return request</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">cancelled products</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">complaint</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">current wishlist</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">current carts</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">coupons</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">best seller</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">product never purch.</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">country report</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">inventory </span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">customers</span> <span class="nav-caret"></span>
+                                    </a>
+                                    <ul class="nav-sub nav-mega">
+                                        <li><a href="#!"><span class="nav-text">customer management</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">customer reports</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">online customer</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">vendor management</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">user reports</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">seller management</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">campaign</span> <span class="nav-caret"></span>
+                                    </a>
+                                    <ul class="nav-sub nav-mega">
+                                        <li><a href="#!"><span class="nav-text">email campaign</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">social media campaign</span></a></li>
+                                        <li><a href="#!"><span class="nav-text">mobile campaign</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">promotions </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">extension </span> <span class="nav-caret"></span>
+                                    </a>
+                                    <ul class="nav-sub nav-mega">
+                                        <li><a href="#!"><span class="nav-text">newsletter </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">quotation </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">gift certificates </span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">reports </span> <span class="nav-caret"></span>
+                                    </a>
+                                    <ul class="nav-sub nav-mega">
+                                        <li><a href="#!"><span class="nav-text">Product Sales Cost </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Product Insert Report </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">SEM Expenses Report  </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">SEM Sales Report </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Product Visits </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Category Sales Cost </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Active Customer Locations </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Shipping Cost Per Order </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Order Status </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Top 10 Customers(Cost) </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Top 10 Customers(Item) </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Top 10 Categories(Cost) </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Top 10 Categories(Item) </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Top 10 Products(Cost) </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Top 10 Products(Item) </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Payment Method(orders) </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">Payment Method(Cost) </span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">design </span> <span class="nav-caret"></span>
+                                    </a>
+                                    <ul class="nav-sub nav-mega">
+                                        <li><a href="#!"><span class="nav-text">CMS </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">home page banners </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">home category </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">how to guide </span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">setting </span> <span class="nav-caret"></span>
+                                    </a>
+                                    <ul class="nav-sub nav-mega">
+                                        <li><a href="#!"><span class="nav-text">store detail </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">roles </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">currency </span></a></li>
+                                        <li><a href="#!"><span class="nav-text">blogs </span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">shipping option </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="nav-icon"><i data-feather="grid"></i></span> <span class="nav-text">payment option </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- sidenav bottom -->
+                </div>
+            </div>
+            <!-- ############ Aside END--><!-- ############ Content START-->
+            <div id="content" class="flex">
+                <!-- ############ Main START-->
+                <div class="page-container">
+                    <div class="pt-3 pr-3 pb-5 pl-3">
+                        <div class="mb-5">
+                            <h2 class="dv_page_heading">Country Report </h2>
+                            <div class="row dv_search_delete_action_common">
+                                <div class="col-md-5 col-sm-5 col-xs-5 col-5">
+                                    <input type="text" class="form-control dv_common_search_for_all" name="" placeholder="Search">
+                                </div>
+                                <div class="col-md-7 col-sm-7 col-xs-7 col-7">
+                                    <button type="text" class="btn btn-default dv_export_common" data-toggle="tooltip" data-placement="top" title="Download all Product CSV">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                    </button>
+                                    <button type="text" class="btn btn-default dv_selected_delete_common" data-toggle="tooltip" data-placement="top" title="Delete Selected Entries">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                                    </button>
+                                    <button type="text" class="btn btn-default dv_selected_filter_common" data-toggle="tooltip" data-placement="top" title="Filter">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row mt-4 dv_filter_content_show" style="display: none;">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <strong>Filter </strong>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="text-muted text-capitalize" for="name">From to date</label>
+                                                        <input type="text" class="form-control dv_common_search_for_all dv_range_datepicker" name="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="text-muted text-capitalize" for="name">Order Status </label>
+                                                        <select class="form-control dv_common_select_for_all">
+                                                            <option value="">Select</option>
+                                                            <option value="Delivered">Delivered</option>
+                                                            <option value="Shipped">Shipped</option>            
+                                                            <option value="Processing">Processing</option>
+                                                            <option value="Canceled">Canceled</option>
+                                                            <option value="Returned">Returned</option>  
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="text-muted text-capitalize" for="name">Payment Status </label>
+                                                        <select class="form-control dv_common_select_for_all">
+                                                            <option value="">Select</option>
+                                                            <option value="Successfully Authorized">Successfully Authorized</option>
+                                                            <option value="Successfully Captured">Successfully Captured</option>            
+                                                            <option value="Successfully Refund">Successfully Refund</option>
+                                                            <option value="Partially Captured">Partially Captured</option>
+                                                            <option value="Partially Refund">Partially Refund</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-theme table-row v-middle">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 5%;">
+                                                <label class="ui-check m-0 ui-check-rounded ui-check-md"><input type="checkbox"> <i></i></label>
+                                            </th>
+                                            <th style="width: 8%;" class="text-muted sortable">sr no</th>
+                                            <th style="width: 60%;" class="text-muted sortable">country</th>
+                                            <th style="width: 12%;" class="text-muted sortable">no of orders </th>
+                                            <th style="width: 15%;" class="text-muted">order total </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="v-middle">
+                                            <td>
+                                                <label class="ui-check m-0 ui-check-rounded ui-check-md"><input type="checkbox"> <i></i></label>
+                                            </td>
+                                            <td>1 </td>
+                                            <td>
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="width: 17px;margin: -3px 5px 0 0;" xml:space="preserve"> <path style="fill:#73AF00;" d="M512,200.093H158.897V88.277h344.276c4.875,0,8.828,3.953,8.828,8.828L512,200.093L512,200.093z"></path> <path style="fill:#464655;" d="M503.172,423.725H158.897V311.909H512v102.988C512,419.773,508.047,423.725,503.172,423.725z"></path> <rect x="158.9" y="200.091" style="fill:#F5F5F5;" width="353.1" height="111.81"></rect> <path style="fill:#FF4B55;" d="M158.897,423.725H8.828c-4.875,0-8.828-3.953-8.828-8.828V97.104c0-4.875,3.953-8.828,8.828-8.828 h150.069V423.725z"></path></svg> <strong class="text-capitalize">united arab emirates</strong>
+                                            </td>
+                                            <td>
+                                                <strong class="text-muted">452</strong>
+                                            </td>
+                                            <td>
+                                                <strong>AED 45,252</strong>
+                                            </td>
+                                        </tr>
+                                        <tr class="v-middle">
+                                            <td>
+                                                <label class="ui-check m-0 ui-check-rounded ui-check-md"><input type="checkbox"> <i></i></label>
+                                            </td>
+                                            <td>2 </td>
+                                            <td>
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;width: 17px; margin: -3px 5px 0 0;" xml:space="preserve"> <path style="fill:#73AF00;" d="M473.655,423.724H38.345C17.167,423.724,0,406.557,0,385.379V126.621 c0-21.177,17.167-38.345,38.345-38.345h435.31c21.177,0,38.345,17.167,38.345,38.345V385.38 C512,406.557,494.833,423.724,473.655,423.724z"></path> <g> <path style="fill:#F5F5F5;" d="M105.94,202.278c0.87,5.577,4.241,7.327,7.171,7.098c3.456-0.268,6.487-3.428,6.487-6.766v-19.138 c0-0.958,0.78-1.74,1.74-1.74s1.74,0.781,1.74,1.74v19.22c0,2.311,1.142,4.466,3.057,5.76c1.169,0.792,2.53,1.199,3.901,1.199 c0.873,0,1.75-0.167,2.586-0.5l1.739-0.695c0.16,16.065-0.817,30.184-0.835,30.443c-0.136,1.917,1.306,3.582,3.223,3.718 c0.085,0.007,0.168,0.01,0.252,0.01c1.81,0,3.337-1.4,3.468-3.232c0.081-1.131,1.153-16.594,0.831-33.715l1.052-0.42 c0.922-0.367,1.958-0.323,2.845,0.119c3.833,1.91,8.445,1.165,11.474-1.863l0.627-0.626c2.812-2.817,3.779-6.909,2.52-10.684 l-2.963-8.889c1.602,0.482,3.362-0.227,4.136-1.77c0.86-1.719,0.163-3.809-1.556-4.669l-6.959-3.48 c-1.259-0.632-2.77-0.438-3.837,0.482c-1.064,0.925-1.466,2.396-1.021,3.731l5.599,16.798c0.419,1.257,0.097,2.623-0.84,3.561 l-0.626,0.626c-0.907,0.907-2.289,1.128-3.444,0.557c-2.255-1.127-4.823-1.338-7.232-0.724c-0.489-11.169-1.692-22.291-4.254-29.98 c-0.607-1.822-2.574-2.81-4.403-2.199c-1.823,0.605-2.808,2.575-2.2,4.401c2.507,7.519,3.599,18.978,3.987,30.372l-4.166,1.666 v-19.22c0-4.798-3.903-8.7-8.7-8.7s-8.7,3.902-8.7,8.7v16.845l-3.55-17.535c-0.378-1.886-2.212-3.116-4.1-2.722 c-1.885,0.384-3.103,2.219-2.72,4.102L105.94,202.278z"></path> <path style="fill:#F5F5F5;" d="M112.64,173.033c1.921,0,3.479-1.557,3.479-3.48v-3.479c0-1.923-1.558-3.48-3.479-3.48 c-1.922,0-3.48,1.556-3.48,3.48v3.479C109.16,171.476,110.718,173.033,112.64,173.033z"></path> <path style="fill:#F5F5F5;" d="M147.437,169.553h3.48c1.922,0,3.48-1.556,3.48-3.479s-1.558-3.48-3.48-3.48h-3.48 c-1.922,0-3.48,1.556-3.48,3.48C143.957,167.997,145.515,169.553,147.437,169.553z"></path> <path style="fill:#F5F5F5;" d="M124.768,215.286l-17.399,10.44c-1.649,0.989-2.182,3.126-1.193,4.775 c0.652,1.088,1.804,1.689,2.987,1.689c0.61,0,1.227-0.16,1.788-0.497l17.399-10.44c1.649-0.989,2.182-3.126,1.193-4.775 C128.553,214.83,126.418,214.297,124.768,215.286z"></path> <path style="fill:#F5F5F5;" d="M171.681,221.441l0.082-0.055c0.292,1.176,0.793,2.314,1.606,3.27 c1.414,1.665,3.534,2.502,5.93,2.304c3.399-0.248,5.709-1.801,7.239-3.806c0.233,0.16,0.478,0.306,0.734,0.435 c1.881,0.948,4.056,0.876,6.127-0.198c5.259-2.708,6.392-8.974,6.232-12.25c-0.094-1.91-1.718-3.258-3.623-3.296 c-1.911,0.082-3.399,1.703-3.33,3.613c0.001,0.044,0.079,4.173-2.445,5.706c-0.412-0.574-0.9-1.866-1.084-2.933 c-0.294-1.791-1.939-3.038-3.709-2.895c-1.804,0.142-3.198,1.658-3.204,3.469c-0.001,0.506-0.114,4.972-3.561,5.345 c-0.401-0.547-0.408-2.851-0.013-4.554c0.333-1.397-0.227-2.855-1.408-3.67c-1.184-0.819-2.745-0.819-3.934-0.013l-1.942,1.321 c-0.922-20.18-3.047-43.695-3.073-43.996c-0.173-1.91-1.855-3.334-3.78-3.15c-1.914,0.173-3.325,1.866-3.151,3.783 c0.03,0.322,2.488,27.529,3.245,48.306c-0.178,0.169-0.361,0.354-0.535,0.516c-1.376-3.469-4.104-5.655-7.617-5.987 c-4.958-0.438-10.33,2.936-12.256,7.755c-1.66,4.146-0.615,8.221,2.66,10.378c2.355,1.553,5.909,2.042,10.378,0.476 c-1.091,3.833-3.078,7.721-5.66,10.728c-2.313,2.695-6.175,5.804-11.117,5.665c-2.877-0.113-5.087-1.054-6.758-2.881 c-4.029-4.401-3.682-12.366-3.679-12.451c0.1-1.917-1.367-3.551-3.283-3.657c-1.929-0.204-3.561,1.363-3.667,3.283 c-0.024,0.441-0.529,10.909,5.464,17.491c2.95,3.245,6.869,4.982,11.649,5.169c0.233,0.01,0.466,0.013,0.7,0.013 c5.821,0,11.469-2.855,15.968-8.098c4.232-4.928,7.106-11.622,7.968-17.836c-0.011,11.904-7.185,25.33-16.696,31.245 c-4.039,2.508-10.336,4.771-17.429,1.274c-8.744-4.316-7.702-14.31-7.656-14.718c0.239-1.907-1.114-3.647-3.021-3.884 c-1.898-0.231-3.648,1.111-3.884,3.021c-0.078,0.622-1.75,15.292,11.482,21.82c3.399,1.678,6.953,2.511,10.535,2.511 c4.601,0,9.245-1.376,13.647-4.115c11.58-7.198,19.985-22.836,19.985-37.183C171.796,226.468,171.753,224.018,171.681,221.441z M150.699,225.028c-0.622-0.412-0.136-1.726-0.031-1.987c0.733-1.835,3.025-3.422,4.856-3.422c0.094,0,0.189,0.003,0.28,0.013 c0.445,0.041,1.626,0.153,2.134,2.78c0.054,0.279,0.1,0.564,0.136,0.856C154.196,225.545,151.596,225.617,150.699,225.028z"></path> <path style="fill:#F5F5F5;" d="M114.397,257.033c-1.649-0.969-3.778-0.415-4.758,1.234c-0.16,0.268-0.372,0.561-0.588,0.825 c-0.038-0.088-0.075-0.183-0.113-0.286c-1.451-3.871-0.418-9.834,0.104-11.806c0.491-1.856-0.614-3.758-2.468-4.255 c-1.852-0.476-3.757,0.605-4.255,2.461c-0.253,0.941-2.392,9.389,0.102,16.043c1.597,4.255,4.049,5.329,5.826,5.474 c0.158,0.013,0.314,0.02,0.469,0.02c3.746,0,6.239-3.775,6.933-4.972C116.61,260.115,116.047,258.005,114.397,257.033z"></path> <path style="fill:#F5F5F5;" d="M178.612,193.911c0.753,0,1.511-0.242,2.147-0.744l17.543-13.773 c0.242-0.19,0.397-0.439,0.574-0.673c2.526-1.524,4.236-4.268,4.236-7.427c0-4.798-3.903-8.7-8.7-8.7s-8.7,3.901-8.7,8.7 c0,2.685,1.248,5.058,3.164,6.655l-12.417,9.748c-1.511,1.186-1.774,3.374-0.588,4.883 C176.559,193.455,177.581,193.911,178.612,193.911z M194.414,169.553c0.96,0,1.74,0.781,1.74,1.74s-0.78,1.74-1.74,1.74 s-1.74-0.781-1.74-1.74S193.454,169.553,194.414,169.553z"></path> <path style="fill:#F5F5F5;" d="M190.295,190.612c-1.833-0.611-3.796,0.377-4.403,2.199c-0.372,1.114-2.055,6.855,1.356,10.262 c1.323,1.325,3.063,1.988,5.199,1.985c1.428,0,3.031-0.292,4.807-0.887c1.823-0.605,2.808-2.575,2.2-4.401 c-0.608-1.822-2.575-2.814-4.403-2.199c-1.944,0.646-2.766,0.541-2.841,0.608c-0.205-0.516-0.07-2.07,0.287-3.181 C193.099,193.181,192.114,191.217,190.295,190.612z"></path> <path style="fill:#F5F5F5;" d="M230.121,176.227c0.327,0.095,0.654,0.139,0.977,0.139c1.507,0,2.895-0.985,3.339-2.505l2.03-6.959 c0.538-1.845-0.522-3.778-2.365-4.316c-1.85-0.534-3.777,0.52-4.316,2.365l-2.03,6.959 C227.217,173.757,228.277,175.69,230.121,176.227z"></path> <path style="fill:#F5F5F5;" d="M209.838,175.819c0.553,0.323,1.158,0.476,1.753,0.476c1.196,0,2.36-0.615,3.007-1.722 c0.97-1.658,0.412-3.793-1.247-4.76c-0.7-0.408-0.605-1.56-0.579-1.788c0.104-0.914,0.649-2.029,1.597-2.325 c1.835-0.57,2.86-2.521,2.289-4.356c-0.574-1.838-2.521-2.855-4.359-2.291c-3.469,1.08-5.998,4.292-6.443,8.18 C205.444,170.851,206.97,174.141,209.838,175.819z"></path> <path style="fill:#F5F5F5;" d="M182.234,232.189c-1.922,0-3.48,1.557-3.48,3.48c0,1.699,1.217,3.113,2.827,3.418 c0.183,0.268,0.652,1.19,0.652,3.541c0,1.923,1.558,3.48,3.48,3.48s3.48-1.556,3.48-3.48 C189.194,232.308,182.518,232.189,182.234,232.189z"></path> <path style="fill:#F5F5F5;" d="M241.27,217.78c0.437,0.072,0.872,0.106,1.309,0.106c2.734,0,5.496-1.379,8.232-4.115 c1.359-1.359,1.359-3.561,0-4.92s-3.561-1.359-4.92,0c-2.081,2.083-3.201,2.127-3.488,2.062c-0.664-0.095-1.266-0.962-1.4-1.199 c-0.873-1.693-2.943-2.368-4.647-1.516c-1.719,0.86-2.417,2.95-1.556,4.669C235.014,213.298,237.024,217.09,241.27,217.78z"></path> <path style="fill:#F5F5F5;" d="M300.419,193.326c-0.022-0.054-0.043-0.106-0.06-0.153c-0.617-1.807-2.588-2.79-4.392-2.175 c-1.825,0.605-2.81,2.575-2.202,4.401c0.271,0.815,1.822,4.907,5.662,5.423c0.256,0.034,0.512,0.051,0.765,0.051 c2.411,0,4.673-1.56,6.73-4.646c1.065-1.597,0.633-3.758-0.966-4.825c-1.601-1.064-3.762-0.636-4.825,0.966 C300.856,192.779,300.618,193.092,300.419,193.326z"></path> <path style="fill:#F5F5F5;" d="M293.587,256.547c0-14.839-0.652-28.76-1.558-40.958c4.941,8.569,9.386,17.228,12.218,24.782 c0.525,1.397,1.85,2.257,3.258,2.257c0.406,0,0.819-0.072,1.222-0.221c1.8-0.676,2.712-2.681,2.037-4.482 c-4.405-11.742-12.321-25.726-20.124-38.14c-1.902-18.745-4.032-30.643-4.07-30.855c-0.343-1.892-2.151-3.17-4.045-2.801 c-1.891,0.343-3.145,2.154-2.802,4.044c0.028,0.151,1.124,6.28,2.434,16.595c-2.674-3.967-5.156-7.546-7.242-10.492l0.17,0.054 c1.833,0.611,3.794-0.377,4.403-2.198c0.608-1.825-0.377-3.796-2.2-4.401l-10.44-3.48c-1.448-0.489-3.037,0.028-3.923,1.265 c-0.237,0.33-0.399,0.692-0.509,1.067c-2.083-1.54-4.755-2.793-7.263-1.742c-1.517,0.629-3.325,2.212-3.325,6.191 c0,3.055,1.165,6.358,2.401,9.858c2.049,5.804,3.332,10.072,1.162,12.108c-1.199,1.124-2.398,1.549-3.566,1.254 c-2.146-0.544-4.27-3.402-5.685-7.646c-0.062-0.184-0.19-0.318-0.278-0.483c0.732-5.39,0.413-11.884-1.062-19.253 c-0.375-1.886-2.204-3.113-4.095-2.729c-1.885,0.377-3.106,2.209-2.729,4.095c2.272,11.363,1.59,20.634-1.823,24.797 c-1.32,1.611-2.974,2.358-5.204,2.358c-0.705,0-1.186-0.224-1.665-0.775c-2.745-3.164-2.734-13.372-1.848-19.615 c0.141-0.995-0.158-2.008-0.819-2.77c-0.661-0.761-1.619-1.199-2.627-1.199c-5.987,0-8.258,6.809-10.261,12.818 c-0.878,2.641-2.516,7.551-3.658,8.061c-2.106,0-3.468-6.185-3.48-10.443c-0.006-1.92-1.561-3.473-3.48-3.473c0,0-0.003,0-0.006,0 c-1.92,0-3.475,1.557-3.475,3.477c0,8.026,2.734,17.399,10.44,17.399c5.738,0,8.062-6.252,10.008-12.064 c0.338,4.621,1.382,9.409,3.947,12.366c1.803,2.08,4.196,3.177,6.924,3.177c4.296,0,7.955-1.696,10.585-4.904 c0.477-0.58,0.887-1.247,1.292-1.92c2.02,2.873,4.499,4.767,7.292,5.472c0.819,0.207,1.643,0.312,2.458,0.312 c2.686,0,5.311-1.108,7.578-3.239c0.471-0.442,0.803-0.927,1.162-1.404c0.851,0.243,1.714,0.387,2.571,0.387 c2.819,0,5.533-1.135,7.217-2.216c1.611-1.033,2.077-3.167,1.054-4.785c-1.024-1.614-3.169-2.097-4.791-1.084 c-0.03,0.014-2.354,1.35-3.939,1.037c0.004-3.815-1.376-7.866-2.636-11.435c-0.717-2.033-1.452-4.115-1.8-5.817 c0.287,0.242,0.567,0.493,0.818,0.737c1.356,1.359,3.56,1.359,4.919,0c0.225-0.225,0.355-0.498,0.505-0.761 c3.607,4.969,11.026,15.411,18.657,27.447c1.457,14.795,2.735,33.668,2.735,54.368c0,1.923,1.558,3.48,3.48,3.48 C292.029,260.026,293.587,258.471,293.587,256.547z"></path> <path style="fill:#F5F5F5;" d="M297.067,179.992c0,1.923,1.558,3.48,3.48,3.48s3.48-1.557,3.48-3.48 c0-4.095-3.204-10.711-3.847-11.996c-0.86-1.716-2.948-2.409-4.669-1.556c-1.719,0.86-2.417,2.95-1.556,4.669 C295.21,173.62,297.067,178.177,297.067,179.992z"></path> <path style="fill:#F5F5F5;" d="M281.233,256.928c-1.706-0.87-3.802-0.18-4.671,1.533c-0.374,0.73-0.953,1.543-1.442,2.066 c-0.154-1.383,0.214-4.146,0.916-6.436c0.467-1.529-0.167-3.18-1.536-4.003c-1.365-0.825-3.123-0.611-4.252,0.52l-6.959,6.959 c-1.359,1.359-1.359,3.561,0,4.92s3.561,1.359,4.92,0l0.177-0.177c0.301,1.397,0.877,2.671,1.863,3.657 c1.304,1.305,2.881,1.995,4.521,1.995c0.318,0,0.637-0.028,0.957-0.078c3.942-0.639,6.396-4.985,7.054-6.301 C283.637,259.866,282.944,257.791,281.233,256.928z"></path> <path style="fill:#F5F5F5;" d="M279.885,228.926H255.36c0.217-0.866,0.441-1.693,0.67-2.477c9.78-2.033,15.593-5.19,17.302-9.402 c0.591-1.461,1.208-4.414-1.309-7.809c-2.269-3.059-5.471-4.431-8.797-3.752c-4.945,1.002-9.35,6.33-12.512,14.86 c-9.824,1.682-16.111,5.208-20.092,8.689c-1.412-14.26-6.948-22.731-7.217-23.134c-1.067-1.601-3.229-2.033-4.825-0.966 c-1.599,1.067-2.03,3.225-0.966,4.825c0.063,0.095,6.375,9.749,6.375,25.908c0,15.883-12.665,27.838-20.878,27.838 c-3.907,0-5.618-4.644-6.369-8.572c8.042-5.636,15.138-12.158,16.705-18.424c2.121-8.479-0.548-14.728-2.314-18.863 c-0.083-0.19-0.17-0.394-0.258-0.605c0.075,0.068,0.146,0.139,0.217,0.207c1.356,1.359,3.56,1.359,4.919,0 c1.359-1.359,1.359-3.562,0-4.92c-2.034-2.036-5.984-5.234-9.575-3.732c-1.517,0.629-3.326,2.212-3.326,6.191 c0,1.798,0.751,3.554,1.621,5.593c1.567,3.667,3.516,8.231,1.963,14.442c-0.919,3.676-5.433,8.135-11.39,12.563 c-0.639-0.764-1.561-1.277-2.633-1.277h-0.006c-1.92,0.003-3.475,1.557-3.475,3.477c0,0.626,0.028,1.295,0.068,1.982 c-7.447,4.823-15.874,9.287-22.388,12.249c-1.749,0.796-2.521,2.858-1.726,4.608c0.583,1.281,1.847,2.039,3.169,2.039 c0.482,0,0.972-0.098,1.438-0.312c1.956-0.889,11.243-5.216,20.783-11.128c1.757,5.965,5.48,11.441,12.575,11.441 c8.348,0,17.818-6.826,23.284-17.017c0.66,1.165,1.418,2.281,2.322,3.322c8.759,10.1,25.867,10.215,26.591,10.215 c1.874,0,3.41-1.482,3.478-3.354c0.066-1.873-1.361-3.463-3.229-3.595c-0.028-0.003-2.801-0.309-4.343-2.111 c-0.931-1.088-1.303-2.582-1.139-4.57c0.356-4.288,14.189-7.494,26.38-7.683c1.452-0.024,2.739-0.945,3.226-2.314l3.48-9.786 c0.378-1.064,0.216-2.25-0.437-3.17C282.078,229.476,281.015,228.926,279.885,228.926z M264.611,212.309 c0.066-0.013,0.154-0.034,0.265-0.034c0.333,0,0.858,0.163,1.558,1.108c0.132,0.177,0.556,0.781,0.449,1.047 c-0.399,0.985-2.802,2.613-7.808,4.088C261.277,214.222,263.43,212.547,264.611,212.309z M243.596,258.052 c-3.535-1.149-7.138-2.97-9.632-5.855c-2.741-3.17-3.753-7.18-3.089-12.254c0.1-0.267,0.328-0.792,0.726-1.475 c4.9-0.449,17.991,1.483,18.898,5.231c-4.038,2.061-7.012,4.959-7.356,9.079C242.97,254.845,243.181,256.595,243.596,258.052z"></path> <path style="fill:#F5F5F5;" d="M317.768,178.891l-3.48-10.44c-0.561-1.678-2.303-2.681-4.029-2.301 c-1.735,0.371-2.912,1.984-2.735,3.748c2.401,24.012,6.943,70.839,6.943,76.209c0,4.822-8.577,14.316-22.435,21.246 c-1.719,0.86-2.417,2.949-1.556,4.669c0.61,1.22,1.838,1.923,3.116,1.923c0.522,0,1.054-0.119,1.553-0.367 c12.659-6.33,26.282-17.626,26.282-27.471c0-5.142-3.556-42.134-5.593-62.914C317.483,182.489,318.345,180.625,317.768,178.891z"></path> <path style="fill:#F5F5F5;" d="M346.803,210.291c0.67,0.67,1.56,1.02,2.462,1.02c0.588,0,1.181-0.149,1.719-0.456 c1.361-0.775,2.037-2.365,1.652-3.884c-0.623-2.446-0.831-5.505-0.501-6.755c1.743,0.054,3.361-1.186,3.617-2.984 c0.271-1.903-1.05-3.667-2.952-3.938c-2.301-0.312-4.321,0.363-5.732,1.933c-0.914,1.02-1.458,2.328-1.753,3.735l-4.03-4.03 c-1.359-1.359-3.562-1.359-4.92,0c-1.359,1.359-1.359,3.561,0,4.92L346.803,210.291z"></path> <path style="fill:#F5F5F5;" d="M354.631,213.92l-13.049,9.352c-1.561,1.118-1.922,3.293-0.802,4.856 c0.68,0.948,1.748,1.451,2.833,1.451c0.702,0,1.41-0.211,2.024-0.652l13.049-9.352c1.561-1.118,1.921-3.293,0.802-4.856 C358.366,213.155,356.188,212.791,354.631,213.92z"></path> <path style="fill:#F5F5F5;" d="M353.475,227.006c-1.095,1.41-0.938,3.394,0.305,4.615c0.149,0.252,0.828,1.583,0.705,5.009 c-0.068,1.923,1.434,3.534,3.354,3.602c0.042,0.003,0.085,0.003,0.126,0.003c1.866,0,3.409-1.479,3.477-3.354 c0.253-7.102-2.071-9.698-3.082-10.484C356.845,225.212,354.655,225.491,353.475,227.006z"></path> <path style="fill:#F5F5F5;" d="M383.843,252.632c1.922,0,3.48-1.556,3.48-3.48c0-5.134-0.264-10.866-0.695-16.829 c3.451,5.654,6.317,10.867,8.155,15.154c0.564,1.322,1.848,2.11,3.2,2.11c0.457,0,0.922-0.088,1.369-0.282 c1.766-0.758,2.584-2.804,1.826-4.567c-3.186-7.435-9.14-17.283-15.921-27.45c-1.365-12.772-3.148-25.287-4.534-34.264 c0.737,0.075,1.502-0.105,2.173-0.541c1.099-0.704,1.614-1.927,1.54-3.144c0.089,0.342,0.185,0.685,0.385,1 c0.023,0.034,2.26,3.727,1.268,8.52c-0.39,1.879,0.821,3.721,2.703,4.111c0.238,0.047,0.476,0.072,0.708,0.072 c1.615,0,3.063-1.132,3.405-2.776c1.571-7.602-2.058-13.419-2.212-13.664c-1.033-1.618-3.185-2.093-4.806-1.067 c-1.103,0.703-1.625,1.927-1.554,3.147c-0.09-0.344-0.19-0.69-0.392-1.005l-5.873-9.134c-0.897-1.394-2.653-1.958-4.193-1.359 c-1.545,0.605-2.449,2.212-2.162,3.843c0.049,0.274,2.708,15.544,5.065,33.949c-2.668-3.767-5.335-7.452-7.922-10.966 c-0.42-5.265-0.842-10.132-1.207-14.157c0.192-0.057,0.381-0.132,0.566-0.224c1.719-0.86,2.417-2.95,1.557-4.669l-3.48-6.959 c-0.751-1.502-2.465-2.25-4.079-1.788c-1.612,0.469-2.663,2.018-2.496,3.69c0.415,4.153,0.847,8.75,1.271,13.579 c-2.201-2.902-4.238-5.557-5.98-7.806c0.34-0.292,0.63-0.655,0.844-1.084c0.86-1.719,0.163-3.809-1.556-4.669l-6.959-3.48 c-1.46-0.727-3.232-0.346-4.263,0.925c-1.026,1.271-1.032,3.085-0.01,4.363c0.188,0.234,8.756,10.974,19.005,24.836 c1.778,22.991,2.962,46.908,1.29,51.922c-0.306,0.918-0.84,1.998-1.341,2.036c-2.103,0.292-7.123-4.41-9.644-9.45 c-1.453-2.902-3.543-3.204-4.661-3.154c-3.74,0.231-5.199,4.346-7.851,11.816c-1.901,5.352-4.263,12.006-6.915,14.728 c-1.437-1.756-3.295-7.646-4.327-13.7c0.484,1.338,1.738,2.306,3.243,2.306c1.922,0,3.48-1.556,3.48-3.479 c0-5.19-3.629-44.711-5.656-66.37c1.693-0.68,2.582-2.572,1.998-4.326l-3.48-10.44c-0.559-1.678-2.276-2.668-4.022-2.304 c-1.731,0.367-2.912,1.974-2.744,3.735c2.365,24.824,6.799,72.772,6.937,79.39c-0.009-0.06-0.021-0.118-0.029-0.178 c-0.27-1.903-2.046-3.208-3.937-2.953c-1.903,0.275-3.223,2.036-2.952,3.938c1.016,7.113,3.613,19.342,9.593,21.334 c0.472,0.16,1.108,0.302,1.854,0.302c1.372,0,3.115-0.486,4.897-2.27c3.79-3.789,6.355-11.014,8.618-17.385 c0.512-1.441,1.117-3.147,1.687-4.608c3.192,4.662,8.763,10.466,14.406,10.012c1.984-0.142,5.593-1.209,7.449-6.776 c1.85-5.551,1.119-24.91-0.128-43.445c2.932,4.109,5.866,8.317,8.667,12.472c1.086,10.421,1.863,20.861,1.863,29.436 C380.364,251.075,381.922,252.632,383.843,252.632z"></path> <path style="fill:#F5F5F5;" d="M410.251,234.329c-2.465-18.364-5.899-39.637-8.074-52.693c0.982,0.242,2.052,0.044,2.915-0.619 c1.529-1.165,1.822-3.35,0.655-4.876l-6.307-8.265c-0.973-1.271-2.69-1.719-4.159-1.077c-1.47,0.642-2.31,2.206-2.036,3.786 c0.063,0.356,6.268,36.078,10.106,64.668c1.466,10.925-0.674,20.689-5.729,26.112c-3.249,3.484-7.554,5.06-12.764,4.757 c-1.913-0.102-3.572,1.338-3.692,3.255s1.335,3.569,3.254,3.69c0.588,0.038,1.167,0.054,1.741,0.054 c6.562,0,12.257-2.405,16.551-7.014C409.271,259.075,412.019,247.49,410.251,234.329z"></path> <path style="fill:#F5F5F5;" d="M371.97,257.268c-1.279,1.389-1.181,3.578,0.172,4.889c0.189,0.183,0.415,0.544,0.416,0.721 c0.001,0.098-0.139,0.391-0.526,0.778c-1.359,1.359-1.359,3.561,0,4.92c0.68,0.68,1.57,1.02,2.461,1.02 c0.89,0,1.781-0.34,2.461-1.02c2.207-2.206,2.612-4.445,2.562-5.937c-0.107-3.211-2.294-5.284-2.731-5.668 C375.363,255.735,373.248,255.884,371.97,257.268z"></path> <path style="fill:#F5F5F5;" d="M359.703,333.58h-3.48h-20.878v-3.48c0-1.923-1.558-3.48-3.48-3.48s-3.48,1.557-3.48,3.48v3.48 H143.957c6.959,6.959,20.878,10.44,31.318,10.44c7.487,0,100.879,0,153.11,0v6.959c0,1.923,1.558,3.48,3.48,3.48h27.838 c5.757,0,10.44-4.683,10.44-10.44C370.142,338.263,365.46,333.58,359.703,333.58z M359.703,347.499h-24.359v-3.48 c16.77,0,27.838,0,27.838,0l-0.625-1.873c0.362,0.548,0.625,1.167,0.625,1.873C363.182,345.94,361.621,347.499,359.703,347.499z"></path> </g></svg> <strong class="text-capitalize">saudi arabia </strong>
+                                            </td>
+                                            <td>
+                                                <strong class="text-muted">452</strong>
+                                            </td>
+                                            <td>
+                                                <strong>AED 45,252</strong>
+                                            </td>
+                                        </tr>
+                                        <tr class="v-middle">
+                                            <td>
+                                                <label class="ui-check m-0 ui-check-rounded ui-check-md"><input type="checkbox"> <i></i></label>
+                                            </td>
+                                            <td>3 </td>
+                                            <td>
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;width: 17px; margin: -3px 5px 0 0;" xml:space="preserve"> <path style="fill:#F5F5F5;" d="M221.446,407.367c2.225-0.676,2.226-3.826,0.002-4.504l-46.34-14.162 c-2.223-0.679-2.222-3.828,0.002-4.504l46.322-14.105c2.226-0.676,2.226-3.828,0-4.504l-46.322-14.105 c-2.225-0.678-2.226-3.826-0.002-4.505l46.339-14.161c2.223-0.679,2.222-3.828-0.002-4.504l-46.335-14.109 c-2.225-0.676-2.226-3.826-0.002-4.505l46.34-14.162c2.223-0.68,2.222-3.828-0.002-4.504l-46.336-14.108 c-2.225-0.679-2.226-3.826-0.002-4.505l46.34-14.162c2.223-0.68,2.222-3.829-0.002-4.505l-46.336-14.108 c-2.225-0.676-2.226-3.826-0.002-4.505l46.34-14.162c2.223-0.68,2.222-3.828-0.002-4.505l-46.322-14.103 c-2.226-0.679-2.226-3.828,0-4.506l46.322-14.104c2.225-0.676,2.226-3.826,0.002-4.504l-46.34-14.162 c-2.223-0.68-2.222-3.827,0.002-4.505l46.336-14.109c2.225-0.676,2.226-3.826,0.002-4.504l-46.34-14.162 c-2.223-0.68-2.222-3.828,0.002-4.505l46.335-14.108c2.225-0.678,2.226-3.827,0.002-4.505l-53.386-16.312 c-0.223-0.07-0.455-0.104-0.689-0.104H38.345C17.167,88.276,0,105.443,0,126.621V385.38c0,21.177,17.167,38.345,38.345,38.345 h129.028c0.233,0,0.463-0.034,0.686-0.102L221.446,407.367z"></path> <path style="fill:#873250;" d="M473.655,88.276h-235.31h-70.973c0.233,0,0.465,0.035,0.689,0.104l53.386,16.312 c2.223,0.679,2.222,3.828-0.002,4.505l-46.335,14.108c-2.225,0.678-2.226,3.826-0.002,4.505l46.34,14.162 c2.223,0.679,2.222,3.828-0.002,4.504l-46.336,14.109c-2.225,0.679-2.226,3.826-0.002,4.505l46.34,14.162 c2.223,0.679,2.222,3.828-0.002,4.504l-46.322,14.104c-2.226,0.679-2.226,3.828,0,4.506l46.322,14.103 c2.225,0.679,2.226,3.826,0.002,4.505l-46.34,14.162c-2.223,0.68-2.222,3.829,0.002,4.505l46.336,14.108 c2.225,0.676,2.226,3.826,0.002,4.505l-46.34,14.162c-2.223,0.68-2.222,3.827,0.002,4.505l46.336,14.108 c2.225,0.676,2.226,3.826,0.002,4.504l-46.34,14.162c-2.223,0.68-2.222,3.829,0.002,4.505l46.335,14.109 c2.225,0.676,2.226,3.826,0.002,4.504l-46.339,14.161c-2.223,0.68-2.222,3.828,0.002,4.505l46.322,14.105 c2.226,0.676,2.226,3.828,0,4.504l-46.322,14.105c-2.225,0.676-2.226,3.826-0.002,4.504l46.34,14.162 c2.223,0.679,2.222,3.828-0.002,4.504l-53.386,16.256c-0.222,0.067-0.454,0.102-0.686,0.102h70.972h235.31 c21.177,0,38.345-17.167,38.345-38.345V126.62C512,105.443,494.833,88.276,473.655,88.276z"></path></svg>
+                                                <strong class="text-capitalize">qatar</strong>
+                                            </td>
+                                            <td>
+                                                <strong class="text-muted">452</strong>
+                                            </td>
+                                            <td>
+                                                <strong>AED 45,252</strong>
+                                            </td>
+                                        </tr>
+                                        <tr class="v-middle">
+                                            <td>
+                                                <label class="ui-check m-0 ui-check-rounded ui-check-md"><input type="checkbox"> <i></i></label>
+                                            </td>
+                                            <td>4 </td>
+                                            <td>
+                                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;width: 17px; margin: -3px 5px 0 0;" xml:space="preserve"> <rect y="85.337" style="fill:#F0F0F0;" width="512" height="341.326"/> <rect y="85.337" style="fill:#FF9811;" width="512" height="113.775"/> <rect y="312.888" style="fill:#6DA544;" width="512" height="113.775"/> <circle style="fill:#0052B4;" cx="256" cy="256" r="43.896"/> <circle style="fill:#F0F0F0;" cx="256" cy="256" r="27.434"/> <polygon style="fill:#0052B4;" points="256,222.146 264.464,241.341 285.319,239.073 272.927,256 285.319,272.927 264.464,270.659 256,289.854 247.536,270.659 226.681,272.927 239.073,256 226.681,239.073 247.536,241.341 "/></svg>
+                                                <strong class="text-capitalize">india</strong>
+                                            </td>
+                                            <td>
+                                                <strong class="text-muted">452</strong>
+                                            </td>
+                                            <td>
+                                                <strong>AED 45,252</strong>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="d-flex">
+                                <ul class="pagination">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span> <span class="sr-only">Previous</span></a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span> <span class="sr-only">Next</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- ############ Main END-->
+            </div>
+            <!-- ############ Content END-->
+        </div>
+
+        <div class="show-mobile-991 dv_fixed_bottom_bar">
+        <ul>
+            <li>
+                <a href="javascript:void(0);" class="active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    Sales
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    Orders
+                    <span>02</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    Inventory
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#asides">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-right"><line x1="21" y1="10" x2="7" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="7" y2="18"></line></svg>
+                    Menu
+                </a>
+            </li>
+        </ul>
+
+		<script src="js/site.min.js"></script>
+		<script src="js/typeahead.bundle.min.js"></script>
+		<script src="js/jquery.countTo.js"></script>
+        <script src="js/select2.min.js"></script>
+        <script src="js/select2.js"></script>
+        <script src="js/select2.js"></script>
+        <script src="js/select2.js"></script>
+        <script type="text/javascript" src="js/moment.datepicker.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <script type="text/javascript">
+            // $(function() {
+            //   $('.single_datepicker').datepicker({
+            //     singleDatePicker: true,
+            //     showDropdowns: true,
+            //     minYear: 1901,
+            //     maxYear: parseInt(moment().format('YYYY'),10)
+            //   })
+            // });
+
+            $(function() {
+                var start = moment().subtract(29, 'days');
+                var end = moment();
+                function cb(start, end) {
+                    $('.dv_range_datepicker span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                }
+                $('.dv_range_datepicker').daterangepicker({
+                   timePicker: true,
+                startDate: moment().startOf('hour'),
+                endDate: moment().startOf('hour').add(32, 'hour'),
+                locale: {
+                  format: 'M/DD hh:mm A'
+                },
+                    ranges: {
+                       'Today': [moment(), moment()],
+                       'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                       'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                       'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                       'This Month': [moment().startOf('month'), moment().endOf('month')],
+                       'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                    }
+                }, cb);
+                cb(start, end);
+            });
+        </script>
+        <script type="text/javascript">
+
+            $('[data-toggle="tooltip"]').tooltip();
+
+            $(document).ready(function(){
+                $('.dv_selected_filter_common').click(function(){
+                    $('.dv_filter_content_show').toggle();
+                })
+            })
+        </script>
+
+    </body>
+</html>
