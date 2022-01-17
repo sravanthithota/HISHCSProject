@@ -11,16 +11,12 @@ namespace DAL
 {
    public class UserDL
     {
-
         static string strquery = string.Empty;
         public static DataSet Login(ArrayList objList)
         {
             try
             {
-
-
                 return SqlHelper.ExecuteDataset(Common.ConStr, "pr_Validate_User", objList.ToArray());
-
             }
 
             catch (Exception ex)

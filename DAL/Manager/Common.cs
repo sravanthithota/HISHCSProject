@@ -11,6 +11,7 @@ namespace DAL.Manager
    public class Common
     {
         public static string ConStr { get; set; }
+        public static string ExelConStr{ get; set; }
 
 
         static byte[] bytes = ASCIIEncoding.ASCII.GetBytes("ProperMS");

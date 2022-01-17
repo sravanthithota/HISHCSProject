@@ -36,7 +36,9 @@ namespace HIS
     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
 );
             var connectionString = Configuration.GetConnectionString("ConStr");
+            var exlConStr = Configuration.GetConnectionString("ExcelConString");
             DAL.Manager.Common.ConStr = connectionString;
+            DAL.Manager.Common.ExelConStr = exlConStr;
 
             // Adding Authentication  
             services.AddAuthentication(options =>
