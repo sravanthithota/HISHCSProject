@@ -88,7 +88,9 @@ import { TreeSelectModule } from 'primeng/treeselect';
 import { TreeTableModule } from 'primeng/treetable';
 import { VirtualScrollerModule } from 'primeng/virtualscroller';
 import { BlockViewer } from './components/blockviewer/blockviewer.component';
- 
+import { ToastrModule } from 'ngx-toastr';
+import { SweetAlert2Module } from "@sweetalert2/ngx-sweetalert2";
+
 import { AppCodeModule } from './components/app-code/app.code.component';
 import { AppComponent } from './app.component';
 import { AppMainComponent } from './app.main.component';
@@ -140,6 +142,8 @@ import { EditorComponent } from './HIS/editor/editor.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MessageService } from 'primeng/api';
+import { ModulesComponent } from './HIS/master/modules/modules.component';
+import { ProgramListComponent } from './HIS/master/program-list/program-list.component';
 // import { LoginComponent } from './his/login/login.component';
 // import { CodeMasterComponent } from './his/code-master/code-master.component';
 
@@ -184,7 +188,9 @@ import { MessageService } from 'primeng/api';
         LoginComponent,
         MasterComponent,
         RegistrationComponent,
-        EditorComponent
+        EditorComponent,
+        ModulesComponent,
+        ProgramListComponent
         
         ],
     imports: [
@@ -277,6 +283,8 @@ import { MessageService } from 'primeng/api';
         ReactiveFormsModule, 
         FormsModule,
         CalendarModule,
+        ToastrModule.forRoot(),
+        SweetAlert2Module.forRoot(),
         TranslateModule.forRoot({
             loader: {
               provide: TranslateLoader,

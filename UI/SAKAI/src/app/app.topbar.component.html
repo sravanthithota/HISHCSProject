@@ -24,15 +24,14 @@
               {{ language == 'en' ? 'English' : 'عربي' }}
             </option>
           </select> 
-        <a href="javascript:void(0);" (click)="SignOut()" class="p-link layout-topbar-button">
+        <a href="javascript:void(0);" (click)="signOut()" class="p-link layout-topbar-button">
             <i class="pi pi-power-off"></i>
             <span>SignOut</span>
         </a>
-        <a href="#" class="p-link layout-topbar-button">
-            <i class="pi pi-cog"></i>
-            <span>Settings</span>
+        <a href="javascript:void(0);" class="p-link layout-topbar-button">
+            <img src="assets/layout/images/mic.png" style="width:1.7rem;" alt="mic">
         </a>
-        <a href="#" class="p-link layout-topbar-button">
+        <a href="javascript:void(0);" (click)="changeMic()" class="p-link layout-topbar-button">
             <img _ngcontent-lia-c167="" style="vertical-align: middle;" src="assets/demo/images/avatar/ionibowcher.png" alt="Ioni Bowcher" width="70%">
         </a>
     </div>

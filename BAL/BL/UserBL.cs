@@ -30,7 +30,8 @@ namespace BAL.BL
                                 select new
                                 {
                                     Id = module.Field<int>("Id"),
-                                    Name = module.Field<string>("Name")
+                                    Name = module.Field<string>("Name"),
+                                    OrderProgram = module.Field<int>("OrderProgram")
                                 };
                 foreach (var item in modules.ToList())
                 { isAdd = 0;
@@ -43,6 +44,7 @@ namespace BAL.BL
                             isAdd = 1;
                             cm.Id = item.Id.ToString();
                             cm.Label = item.Name;
+                            cm.OrderProgram = item.OrderProgram.ToString(); ;
                         }
                         //Check if your Messages collection exists
                         if (cm.Items == null)
@@ -55,6 +57,7 @@ namespace BAL.BL
                         obj.Label = dr["Name"].ToString();
                         obj.Icon = dr["Icon"].ToString();
                       obj.RouterLink = dr["URL"].ToString();
+                      obj.OrderProgram = dr["OrderProgram"].ToString();
                         cm.Items.Add(obj);
                       
                     }

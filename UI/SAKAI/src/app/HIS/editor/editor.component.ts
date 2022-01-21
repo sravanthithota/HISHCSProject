@@ -36,7 +36,7 @@ model:  MenuItem[]= [];;
                 item={label:show.label}   
          item.icon=i.icon
          item.label=i.label;
-          item.command=() => this.AddTab(i.id);
+          item.command=() => this.AddTab(i.orderProgram);
           items.push(item);
           
         })
@@ -44,19 +44,25 @@ model:  MenuItem[]= [];;
         this.model.push({label:show.label,items:items});
       })
     });
-  this.tabService.tolTab.subscribe(data => {  
-    this.index= data;
-  });
+
   this.tabService.tolComm.subscribe(data => {  
     this.tabs= data;
   });
+  this.GetCurrentIndex();
 }
   }
   handleChange(e) {
-    this.index = e.index;
+ 
+    this.tabService.removeComm(e.index);
+  }
+  GetCurrentIndex(){
+    this.tabService.tolTab.subscribe(data => {  
+      this.index= data;
+    });
   }
   AddTab(i){
-    
+    debugger  
     this.tabService.addComm(i);
+    this.GetCurrentIndex();
 }
 }

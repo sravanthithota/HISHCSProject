@@ -1,6 +1,6 @@
-
-    <p-tabView dynamic="true"activeIndex="#{index}" [ngClass]="{'rtl' : SelectedLang == 'ar'}" (onChange)="handleChange($event)">
-        <p-tabPanel *ngFor="let tab of tabs;let i = index;" [header]="tab.header"   class="line-height-3 m-0"  closable='true'>
+<!-- <p>{{index}}</p> -->
+    <p-tabView  dynamic="true" cache="false" [activeIndex]="index" [ngClass]="{'rtl' : SelectedLang == 'ar'}" (onClose)="handleChange($event)">
+        <p-tabPanel *ngFor="let tab of tabs" [header]="tab.header"   class="line-height-3 m-0"  closable='true'>
             <ng-container *ngComponentOutlet="tab.component"></ng-container>
            
         </p-tabPanel>

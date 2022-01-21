@@ -10,6 +10,7 @@ namespace BAL.ViewModel
     {
         public string Id { get; set; }
         public string Label { get; set; }
+        public string OrderProgram { get; set; }
         public List<ItemViewModel> Items { get; set; }
     }
     class ItemViewModel
@@ -19,6 +20,7 @@ namespace BAL.ViewModel
         public string Label { get; set; }
         public string Icon { get; set; }
        public string RouterLink { get; set; }
-      
+        public string OrderProgram { get; set; }
+
     }
 }

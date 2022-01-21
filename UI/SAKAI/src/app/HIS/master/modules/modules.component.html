@@ -1,0 +1,119 @@
+<div class="grid">
+    <div class="col-12 pb-2">
+        <p-breadcrumb [model]="breadcrumbItems" [home]="{icon: 'pi pi-home'}" class="p-breadcrumb"></p-breadcrumb>
+    </div>
+    <div class="col-12">
+        <div class="card" [formGroup]="ModuleForm">
+            <div class="p-fluid p-formgrid grid">
+                <div class="field col-12 md:col-3">
+                    <label htmlFor="name">Module Name</label>
+                    <input pInputText id="name" formControlName="Name" type="text" />
+                </div>
+                <div class="field col-12 md:col-4">
+                    <label htmlFor="description">Description</label>
+                    <input pInputTextarea id="description" formControlName="Description" rows="4" />
+                </div>
+            </div>
+            <div class="col-12 md:col-6">
+                <button pButton pRipple type="submit" (click)="save()" label="Save" class="mr-2 mb-2"></button>
+                <button pButton pRipple label="Clear" class="mr-2 mb-2"></button>
+                <button pButton pRipple type="submit" label="Upload" class="mr-2 mb-2"></button>
+                <button pButton pRipple label="Download" (click)="DownloadFile()" class="mr-2 mb-2"></button>
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="card">
+            <p-table #dt1 [value]="mainList" dataKey="id" [rows]="10" [rowHover]="true" styleClass="p-datatable-gridlines" [paginator]="true" [globalFilterFields]="['name','description','createdUserName']" responsiveLayout="scroll">
+                <ng-template pTemplate="caption">
+                    <div class="flex justify-content-between flex-column sm:flex-row">
+                        <button pButton label="Clear" class="p-button-outlined mb-2" icon="pi pi-filter-slash" (click)="clear(dt1)"></button>
+                        <span class="p-input-icon-left mb-2">
+                           <i class="pi pi-search"></i>
+                           <input pInputText type="text" #filter (input)="dt1.filterGlobal($event.target.value, 'contains')"  class="w-full"/>
+                       </span>
+                    </div>
+                </ng-template>
+                <ng-template pTemplate="header">
+                    <tr>
+
+                        <th>
+                            <div class="flex justify-content-between align-items-center">
+                                Name
+                                <p-columnFilter type="text" field="Name" display="menu" placeholder="code"></p-columnFilter>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="flex justify-content-between align-items-center">
+                                Description
+                                <p-columnFilter type="text" field="description" display="menu" placeholder="Search by description"></p-columnFilter>
+
+                            </div>
+                        </th>
+                        <th>
+                            <div class="flex justify-content-between align-items-center">
+                                User
+                                <p-columnFilter type="text" field="createdBy" display="menu" placeholder="Search by country"></p-columnFilter>
+                            </div>
+                        </th>
+                        <th style="width: 8rem">
+                            <div class="flex justify-content-between align-items-center">
+                                Time Stamp
+                                <p-columnFilter type="date" field="timeStamp" display="menu" placeholder="mm/dd/yyyy"></p-columnFilter>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="flex justify-content-between align-items-center">
+                                Actions
+                                <p-columnFilter type="text" field="code" display="menu" placeholder="code"></p-columnFilter>
+                            </div>
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-mainList>
+                    <tr>
+
+                        <td style="min-width: 12rem;">
+                            {{mainList.name}}
+                        </td>
+
+                        <td style="min-width: 25rem;">
+                            <!-- <img [alt]="mainList.description" src="{{mainList.images}}" width="32" style="vertical-align: middle" /> -->
+                            <span class="image-text ml-2">{{mainList.description}}</span>
+                        </td>
+
+                        <td style="min-width: 10rem;">
+                            {{mainList.createdUserName}}
+                        </td>
+                        <td style="min-width: 10rem;">
+                            {{mainList.timeStamp | date:'short'}}
+                        </td>
+                        <td style="min-width: 12rem;">
+                            <button pbutton="" pripple="" label="Delete" icon="pi pi-pencil" class="p-element p-ripple p-button p-component p-button-icon-only" (click)="Edit(mainList)">
+                            <span class="p-button-icon pi pi-pencil" aria-hidden="true"></span>
+                            <span class="p-button-label"></span>
+                            <span class="p-ink"></span>
+                        </button>
+                            <button pbutton="" pripple="" label="Delete" icon="pi pi-trash" class="ml-2 p-element p-ripple p-button p-component p-button-icon-only" (click)="confirmBox(mainList)">
+                            <span class="p-button-icon  pi pi-trash" aria-hidden="true"></span>
+                            <span class="p-button-label"></span>
+                            <span class="p-ink"></span>
+                        </button>
+
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="emptymessage">
+                    <tr>
+                        <td colspan="7">No data found.</td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="loadingbody">
+                    <tr>
+                        <td colspan="7">Loading data. Please wait.</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</div>

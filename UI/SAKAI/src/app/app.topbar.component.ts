@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit,NgZone  } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppMainComponent } from './app.main.component';
 import { Subscription } from 'rxjs';
@@ -9,6 +9,7 @@ import { SharedService } from './service/shared.service';
 import { Router, RoutesRecognized } from '@angular/router';
 import { LocalStoreService } from './service/local-store.service';
 import { AuthService } from './service/auth.service';
+declare const annyang: any;
 @Component({
     selector: 'app-topbar',
     templateUrl: './app.topbar.component.html'
@@ -21,8 +22,12 @@ export class AppTopBarComponent implements OnInit{
    
     model:  MenuItem[]= [];;
 
-
-    constructor(private authService:AuthService,private sharedService:SharedService,private router: Router,public translate: TranslateService,public app: AppComponent, public appMain: AppMainComponent,private tabService:TabService,private ls:LocalStoreService) {
+    voiceActiveSectionDisabled: boolean = true;
+	voiceActiveSectionError: boolean = false;
+	voiceActiveSectionSuccess: boolean = false;
+	voiceActiveSectionListening: boolean = false;
+    voiceText: any;
+    constructor(private ngZone: NgZone,private authService:AuthService,private sharedService:SharedService,private router: Router,public translate: TranslateService,public app: AppComponent, public appMain: AppMainComponent,private tabService:TabService,private ls:LocalStoreService) {
        
         this.SelectedLang=this.ls.getItem('lang');
         translate.addLangs(['en', 'ar']);
@@ -59,7 +64,7 @@ if(this.authService.isLoggedIn()){
                           item={label:show.label}   
                    item.icon=i.icon
                    item.label=i.label;
-                    item.command=() => this.AddTab(i.id);
+             item.command=() => this.AddTab(i.orderProgram);
                     items.push(item);
                     
                   })
@@ -91,8 +96,90 @@ if(this.authService.isLoggedIn()){
     this.translate.use(lang);
     
     }
-    SignOut(){
+    signOut(){
         debugger
         this.authService.signOut();
     }
+
+    //#region Textbox Recording
+    initializeVoiceRecognitionCallback(): void {
+		annyang.addCallback('error', (err:any) => {
+      if(err.error === 'network'){
+        this.voiceText = "Internet is require";
+        annyang.abort();
+        this.ngZone.run(() => this.voiceActiveSectionSuccess = true);
+      } else if (this.voiceText === undefined) {
+				this.ngZone.run(() => this.voiceActiveSectionError = true);
+				annyang.abort();
+			}
+		});
+
+		annyang.addCallback('soundstart', (res:any) => {
+      this.ngZone.run(() => this.voiceActiveSectionListening = true);
+		});
+
+		annyang.addCallback('end', () => {
+      if (this.voiceText === undefined) {
+        this.ngZone.run(() => this.voiceActiveSectionError = true);
+				annyang.abort();
+			}
+		});
+
+		annyang.addCallback('result', (userSaid:any) => {
+			this.ngZone.run(() => this.voiceActiveSectionError = false);
+
+			let queryText: any = userSaid[0];
+
+			annyang.abort();
+
+      this.voiceText = queryText;
+
+			this.ngZone.run(() => this.voiceActiveSectionListening = false);
+      this.ngZone.run(() => this.voiceActiveSectionSuccess = true);
+		});
+	}
+
+	startVoiceRecognition(): void {
+    this.voiceActiveSectionDisabled = false;
+		this.voiceActiveSectionError = false;
+		this.voiceActiveSectionSuccess = false;
+    this.voiceText = undefined;
+
+		if (annyang) {
+			let commands = {
+				'demo-annyang': () => { }
+			};
+
+			annyang.addCommands(commands);
+
+      this.initializeVoiceRecognitionCallback();
+
+			annyang.start({ autoRestart: false });
+		}
+	}
+
+	closeVoiceRecognition(): void {
+    this.voiceActiveSectionDisabled = true;
+		this.voiceActiveSectionError = false;
+		this.voiceActiveSectionSuccess = false;
+		this.voiceActiveSectionListening = false;
+		this.voiceText = undefined;
+
+		if(annyang){
+      annyang.abort();
+    }
+
+    
+	}
+    changeMic() {
+        if(this.voiceActiveSectionListening){
+            this.sharedService.changeMic(false);
+        }
+        else{
+            this.sharedService.changeMic(true);
+        }
+       
+        
+        }
+    //#endregion
 }

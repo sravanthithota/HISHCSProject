@@ -14,7 +14,7 @@
                 
                     <label htmlFor="Category" >{{'Category' | translate}}</label>
                    
-                      <p-dropdown  [options]="catList" [filter]="true" [(ngModel)]="selectedDrop" placeholder="{{'SelectAParent' | translate}}" [showClear]="true" formControlName="CategoryCode"></p-dropdown>
+                      <p-dropdown optionValue="1"   [options]="catList" [filter]="true"  placeholder="{{'SelectACategory' | translate}}" [showClear]="true" formControlName="CategoryCode"></p-dropdown>
                 </div>
                 <div class="field col-12 md:col-1">
                     <label htmlFor="Code"  [ngClass]="{'ar-label' : SelectedLang == 'ar'}">{{'Code' | translate}}</label>
@@ -30,7 +30,7 @@
                 </div>
                 <div class="field col-12 md:col-2">
                     <label htmlFor="Parent"  [ngClass]="{'ar-label' : SelectedLang == 'ar'}">{{'Parent' | translate}}</label>
-                    <p-dropdown   [options]="catList" [filter]="true" [(ngModel)]="selectedDrop" placeholder="{{'SelectACategory' | translate}}" [showClear]="true"  formControlName="ParentId"></p-dropdown>
+                    <p-dropdown    [options]="catList" [filter]="true"  placeholder="{{'SelectAParent' | translate}}" [showClear]="true"  formControlName="ParentId"></p-dropdown>
                 </div>
                
         </div>
