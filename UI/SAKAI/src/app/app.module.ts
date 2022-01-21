@@ -1,7 +1,7 @@
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule }      from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -137,6 +137,9 @@ import { LoginComponent } from './HIS/login/login.component';
 import { MasterComponent } from './HIS/master/master.component';
 import { RegistrationComponent } from './HIS/master/registration/registration.component';
 import { EditorComponent } from './HIS/editor/editor.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MessageService } from 'primeng/api';
 // import { LoginComponent } from './his/login/login.component';
 // import { CodeMasterComponent } from './his/code-master/code-master.component';
 
@@ -273,12 +276,20 @@ import { EditorComponent } from './HIS/editor/editor.component';
         AppCodeModule,
         ReactiveFormsModule, 
         FormsModule,
-        CalendarModule
+        CalendarModule,
+        TranslateModule.forRoot({
+            loader: {
+              provide: TranslateLoader,
+              useFactory: httpTranslateLoader,
+              deps: [HttpClient]
+            }
+          
+          })
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
         CountryService, CustomerService, EventService, IconService, NodeService,
-        PhotoService, ProductService, MenuService
+        PhotoService, ProductService, MenuService,MessageService
     ],
     schemas: [
         CUSTOM_ELEMENTS_SCHEMA
@@ -286,3 +297,6 @@ import { EditorComponent } from './HIS/editor/editor.component';
     bootstrap: [AppComponent]
 })
 export class AppModule { }
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

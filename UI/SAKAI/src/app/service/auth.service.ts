@@ -16,6 +16,8 @@ export class AuthService {
   return:String;
   user:User;
   user$=(new BehaviorSubject<User>(this.ls.getItem("user")));
+  menu=(new BehaviorSubject<User>(this.ls.getItem("menu")));
+  myMenu = this.menu.asObservable();
   jwtToken="token";
   appUser="user";
   isLogging="isLogging";
@@ -28,20 +30,24 @@ export class AuthService {
    ) { 
      
    }
-    login(IdamuserId:string) {
+    login(model) {
  
  
  
-     return this.httpClient.get(`${baseApiUrl}/api/Authenticate/Login?IdamuserId=`+IdamuserId)
+     return this.httpClient.post(`${baseApiUrl}/api/Account/Login`,model)
     }
- public makeLogin(){
+ public makeLogin(returnUrl){
    if(this.isLoggedIn()){
-     this.router.navigateByUrl("en/user")
+     this.router.navigateByUrl(returnUrl)
    }
  }
+ public getMenuList(){
+  
+  return this.ls.getItem('menu')
+}
  public signOut(){
    this.setUserAndToken(null,null,false);
-   this.router.navigateByUrl("en/login");
+   this.router.navigateByUrl("login");
  }
  isLoggedIn():Boolean{
    return !!this.getJwtToken();
@@ -53,12 +59,14 @@ export class AuthService {
    return this.ls.getItem(this.appUser)
  }
  
- setUserAndToken(token:String,user:User,isAuthenticated:Boolean){
- debugger
+ setUserAndToken(token:String,user:any,isAuthenticated:Boolean){
+ 
    this.isAuthenticated=isAuthenticated;
    this.token=token;
    this.user=user;
    this.user$.next(user);
+   this.menu.next(user);
+   this.ls.setItem('menu',user);
    this.ls.setItem(this.jwtToken,token);
    this.ls.setItem(this.appUser,user);
    this.ls.setItem(this.isLogging,isAuthenticated);

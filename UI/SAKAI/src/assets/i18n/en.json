@@ -1,0 +1,19 @@
+{
+    "Category": "Category",
+    "Description": "Description",
+    "ShortCode": "ShortCode",
+    "Parent": "Parent",
+    "Submit": "Submit",
+    "Clear": "Clear",
+    "User": "User",
+    "Timestamp": "Timestamp",
+    "CodeMaster": "Code Master",
+    "SelectAParent": "Select a Parent",
+    "SelectACategory": "Select a Category",
+    "NoDataFound": "No data found.",
+    "PleaseWait": "Please wait.",
+    "Code": "Code",
+    "Edit": "Edit",
+    "Delete": "Delete"
+    
+}

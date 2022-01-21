@@ -1,52 +1,52 @@
 
 
-<div class="grid">
- <div class="col-12">
+<div class="grid" [ngClass]="{'rtl' : SelectedLang == 'ar'}">
+ <!-- <div class="col-12">
      
             <p-breadcrumb [model]="breadcrumbItems" [home]="{icon: 'pi pi-home'}" class="p-breadcrumb"></p-breadcrumb>
 
-    </div> 
+    </div>  -->
     <div class="col-12">
         <div class="card">
-           
+			<form [formGroup]="mainForm" (ngSubmit)="Save(mainForm.value);" [ngClass]="{'rtl' : SelectedLang == 'ar'}">
             <div class="p-fluid p-formgrid grid">
                 <div class="field col-12 md:col-2">
                 
-                    <label htmlFor="Category">Category</label>
+                    <label htmlFor="Category" >{{'Category' | translate}}</label>
                    
-                      <p-dropdown  [options]="catList" [filter]="true" [(ngModel)]="selectedDrop" placeholder="Select a Category" [showClear]="true"></p-dropdown>
+                      <p-dropdown  [options]="catList" [filter]="true" [(ngModel)]="selectedDrop" placeholder="{{'SelectAParent' | translate}}" [showClear]="true" formControlName="CategoryCode"></p-dropdown>
                 </div>
                 <div class="field col-12 md:col-1">
-                    <label htmlFor="Code">Code</label>
-                    <input pInputText id="Code" type="text" />
+                    <label htmlFor="Code"  [ngClass]="{'ar-label' : SelectedLang == 'ar'}">{{'Code' | translate}}</label>
+                    <input pInputText id="Code" type="text" formControlName="Code" />
                 </div>
                 <div class="field col-12 md:col-3">
-                    <label htmlFor="description">Description</label>
-                    <input pInputTextarea id="description" rows="4" />
+                    <label htmlFor="description"  [ngClass]="{'ar-label' : SelectedLang == 'ar'}">{{'Description' | translate}}</label>
+                    <input pInputTextarea id="description" rows="4" formControlName="Description" />
                 </div>
                 <div class="field col-12 md:col-1">
-                    <label htmlFor="Shortcode">ShortCode</label>
-                    <input pInputText id="Shortcode" type="text" />
+                    <label htmlFor="Shortcode"  [ngClass]="{'ar-label' : SelectedLang == 'ar'}"> {{'ShortCode' | translate}}</label>
+                    <input pInputText id="Shortcode" type="text" formControlName="ShortCode" />
                 </div>
                 <div class="field col-12 md:col-2">
-                    <label htmlFor="Parent">Parent</label>
-                    <p-dropdown   [options]="catList" [filter]="true" [(ngModel)]="selectedDrop" placeholder="Select a Parent" [showClear]="true"></p-dropdown>
+                    <label htmlFor="Parent"  [ngClass]="{'ar-label' : SelectedLang == 'ar'}">{{'Parent' | translate}}</label>
+                    <p-dropdown   [options]="catList" [filter]="true" [(ngModel)]="selectedDrop" placeholder="{{'SelectACategory' | translate}}" [showClear]="true"  formControlName="ParentId"></p-dropdown>
                 </div>
                
         </div>
         <div class="col-12 md:col-6">
             
-            <button pButton pRipple type="submit" label="Submit" class="mr-2 mb-2"></button>
-            <button pButton pRipple label="Clear" class="mr-2 mb-2"></button>
+            <button pButton pRipple type="submit" label="{{'Submit' | translate}}" class="mr-2 mb-2"></button>
+            <button pButton pRipple label="{{'Clear' | translate}}" class="mr-2 mb-2"></button>
        </div>
-      
+			</form>
         </div>
     </div>
     <div class="col-12">
 		<p-table #dt1 [value]="mainList" dataKey="id" [rows]="10" [loading]="loading" [rowHover]="true" styleClass="p-datatable-gridlines" [paginator]="true" [globalFilterFields]="['categoryCode','code','description','shortCode']" responsiveLayout="scroll">
 			<ng-template pTemplate="caption">
 				<div class="flex justify-content-between flex-column sm:flex-row">
-					<button pButton label="Clear" class="p-button-outlined mb-2" icon="pi pi-filter-slash" (click)="clear(dt1)"></button>
+					<button pButton label="{{'Clear' | translate}}" class="p-button-outlined mb-2" icon="pi pi-filter-slash" (click)="clear(dt1)"></button>
 					<span class="p-input-icon-left mb-2">
 						<i class="pi pi-search"></i>
 						<input pInputText type="text" #filter (input)="dt1.filterGlobal($event.target.value, 'contains')"  class="w-full"/>
@@ -57,7 +57,7 @@
 				<tr>
 					<th>
 						<div class="flex justify-content-between align-items-center">
-							Category
+							{{'Category' | translate}}
 							<p-columnFilter field="representative" matchMode="in" display="menu" [showMatchModes]="false" [showOperator]="false" [showAddButton]="false">
 								<ng-template pTemplate="header">
 									<div class="px-3 pt-3 pb-0">
@@ -78,30 +78,30 @@
 					</th>
 					<th>
 						<div class="flex justify-content-between align-items-center">
-							Code
+							{{'Code' | translate}}
 							<p-columnFilter type="text" field="code" display="menu" placeholder="code"></p-columnFilter>
 						</div>
 					</th>
 					<th>
 						<div class="flex justify-content-between align-items-center">
-							Description
+							 	{{'Description' | translate}}
 							<p-columnFilter type="text" field="description" display="menu" placeholder="Search by description"></p-columnFilter>
 					
 						</div>
 					</th>
 					<th>
 						<div class="flex justify-content-between align-items-center">
-							Short Name
+							 	{{'ShortCode' | translate}}
 							<p-columnFilter type="text" field="shortCode" display="menu" placeholder="Search by shortCode"></p-columnFilter>
 						</div>
 					</th>
 					<th>
 						<div class="flex justify-content-between align-items-center">
-							Parent
+							 	{{'Parent' | translate}}
 							<p-columnFilter field="representative" matchMode="in" display="menu" [showMatchModes]="false" [showOperator]="false" [showAddButton]="false">
 								<ng-template pTemplate="header">
 									<div class="px-3 pt-3 pb-0">
-										<span class="font-bold">Master Code</span>
+										<span class="font-bold">	{{'CodeMaster' | translate}}</span>
 									</div>
 								</ng-template>
 								<ng-template pTemplate="filter" let-value let-filter="filterCallback">
@@ -118,17 +118,19 @@
 					</th>
 					<th>
 						<div class="flex justify-content-between align-items-center">
-							User
+							{{'User' | translate}}
 							<p-columnFilter type="text" field="createdBy" display="menu" placeholder="Search by country"></p-columnFilter>
 						</div>
 					</th>
 					
 					<th style="width: 8rem">
 						<div class="flex justify-content-between align-items-center">
-							Time Stamp
+							 {{'Timestamp' | translate}}
 							<p-columnFilter type="date" field="timeStamp" display="menu" placeholder="mm/dd/yyyy"></p-columnFilter>
 						</div>
 					</th>
+					<th style="width: 2rem">{{'Edit' | translate}}</th>
+					<th style="width: 2rem">{{'Delete' | translate}}</th>
 				</tr>
 			</ng-template>
 			<ng-template pTemplate="body" let-mainList>
@@ -156,16 +158,22 @@
 					<td style="min-width: 10rem;">
 						{{mainList.timeStamp}}
 					</td>
+					<td>
+						<span style="cursor:pointer" (click)="LoadToEdit(mainList.id)" title="{{'Edit' | translate}}"><i class="pi pi-eye" style="font-size: 1rem"></i></span>
+					</td>
+					<td>
+						<span style="cursor:pointer"  title="{{'Delete' | translate}}"><i class="pi pi-trash" style="font-size: 1rem"></i></span>
+					</td>
 				</tr>
 			</ng-template>
 			<ng-template pTemplate="emptymessage">
 				<tr>
-					<td colspan="7">No data found.</td>
+					<td colspan="7">{{'NoDataFound' | translate}}</td>
 				</tr>
 			</ng-template>
 			<ng-template pTemplate="loadingbody">
 				<tr>
-					<td colspan="7">Loading  data. Please wait.</td>
+					<td colspan="7">{{'PleaseWait' | translate}}</td>
 				</tr>
 			</ng-template>
 		</p-table>

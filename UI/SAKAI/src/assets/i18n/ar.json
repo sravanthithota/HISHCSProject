@@ -1,0 +1,18 @@
+{
+    "Category": "فئة",
+    "Description": "وصف",
+    "ShortCode": "رمز قصير",
+    "Parent": "الأبوين",
+    "Submit": "إرسال",
+    "Clear": "صافي",
+    "User": "مستخدم",
+    "Timestamp": "الطابع الزمني",
+    "CodeMaster": "كود ماستر",
+    "SelectAParent": "حدد أحد الوالدين",
+    "SelectACategory": "اختر تصنيف",
+    "NoDataFound": "لاتوجد بيانات.",
+    "PleaseWait": "أرجو الإنتظار.",
+    "Code": "رمز",
+    "Edit": "تعديل",
+    "Delete": "حذف"
+}

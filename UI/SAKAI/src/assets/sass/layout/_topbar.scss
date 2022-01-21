@@ -146,4 +146,18 @@
             }
         }
     }
+    .top-menu{
+        display: none;
+    }
+    .side-menu{
+        display: inline-flex;
+    }
+}
+@media (min-width: 991px) {
+    .top-menu{
+        display: block;
+    }
+    .side-menu{
+        display: none !important;
+    }
 }

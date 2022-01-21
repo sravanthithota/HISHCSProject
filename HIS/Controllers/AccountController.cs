@@ -23,7 +23,7 @@ namespace HIS.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-
+        UserBL userBL = new UserBL();
         private readonly IConfiguration Configuration;
         public AccountController(IConfiguration configuration)
         {
@@ -68,7 +68,7 @@ namespace HIS.Controllers
                             token = new JwtSecurityTokenHandler().WriteToken(token),
                             token_type = "bearer",
                             UserDetail= ds.Tables[0],
-                            Program=ds.Tables[1],
+                            Menu= userBL.GetControl(ds.Tables[1]),
                             IsError = "0",
                             Msg = "Logged in successfully"
                         });
@@ -77,7 +77,7 @@ namespace HIS.Controllers
                     {
                         return Ok(new
                         {
-                            IsError = "0",
+                            IsError = "1",
                             Msg = ds.Tables[0].Rows[0]["msg"].ToString()
                         });
                     }

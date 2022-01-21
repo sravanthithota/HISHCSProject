@@ -1,8 +1,9 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MenuItem, SelectItem } from 'primeng/api';
 import { Table } from 'primeng/table';
 import { CodeMasterService } from 'src/app/service/code-master.service';
+import { SharedService } from 'src/app/service/shared.service';
 
 @Component({
   selector: 'app-master',
@@ -15,19 +16,34 @@ export class MasterComponent implements OnInit {
   successMsg = false;  
   errorMsg = false;  
   showList=false;
-  ID=null;
+  Id=null;
   msg="";
   selectedDrop: SelectItem;
   mainList:any;
   loading:boolean = true;
   breadcrumbItems:any = [];
   @ViewChild('dt') table: Table;
-
+  public SelectedLang:string;
   @ViewChild('filter') filter: ElementRef;
-  constructor(private formBuilder:FormBuilder,private codeMasterservice:CodeMasterService) { }
+  constructor(private formBuilder:FormBuilder,private codeMasterservice:CodeMasterService,private sharedService:SharedService) { }
 
   ngOnInit(): void {
+
+    this.sharedService.currentLang.subscribe(lan => {  
+      this.SelectedLang= lan;
+    });
+    this.mainForm=this.formBuilder.group({
+      Id:0,
+      CategoryCode:['',Validators.required],
+      Code:['',Validators.required],
+      Description:[''],
+      ShortCode:[''],
+      ParentId:0
+
+     
     
+    });
+
     this.GetSystemCodeParent('0');
     this.GetSystemCodeMaster('0');
     this.breadcrumbItems = [];
@@ -48,7 +64,19 @@ export class MasterComponent implements OnInit {
 
     });
   }
-  save(model){
+  LoadToEdit(Id){
+    this.codeMasterservice.GetSystemCodeMaster(Id).subscribe(data=>{
+      debugger
+      this.Id = data["table"][0]["id"];  
+      this.mainForm.controls['CategoryCode'].setValue(data["table"][0]["categoryCode"]);  
+      this.mainForm.controls['Code'].setValue(data["table"][0]["code"]);  
+      this.mainForm.controls['Description'].setValue(data["table"][0]["description"]);  
+      this.mainForm.controls['ShortCode'].setValue(data["table"][0]["shortCode"]);  
+      this.mainForm.controls['ParentId'].setValue(data["table"][0]["parentId"]);  
+
+    });
+  }
+  Save(model){
 
   }
   

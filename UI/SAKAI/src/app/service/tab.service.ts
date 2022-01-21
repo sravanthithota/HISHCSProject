@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { LoginComponent } from '../HIS/login/login.component';
 import { MasterComponent } from '../HIS/master/master.component';
 import { RegistrationComponent } from '../HIS/master/registration/registration.component';
 import { Tab } from '../model/tab';
@@ -9,6 +10,7 @@ import { Tab } from '../model/tab';
 })
 export class TabService {
   public tabs: Tab[] = [
+    new Tab(LoginComponent,"Login",{parent:"LoginComponent"}),
     new Tab(MasterComponent, "Code Master", { parent: "AppComponent" }),
     new Tab(RegistrationComponent, "Registration Component", { parent: "AppComponent" })
     ];
@@ -18,7 +20,8 @@ export class TabService {
   public tabSub = new BehaviorSubject<Tab[]>(this.tabs);
   public CommSub = new BehaviorSubject<Tab[]>(this.AddedComm);
   public lastSub = new BehaviorSubject<number>(this.lastIndex);
-  
+  tolTab = this.lastSub.asObservable();
+  tolComm = this.CommSub.asObservable();
 public removeTab(index: number) {
 this.tabs.splice(index, 1);
 if (this.tabs.length > 0) {
@@ -48,7 +51,7 @@ public addComm(num) {
   
   }
 }
-debugger
+
  if(IsExists){
   this.AddedComm.push(this.tabs[num]);
 this.CommSub.next(this.AddedComm);

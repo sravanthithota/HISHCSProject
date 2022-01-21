@@ -27,13 +27,28 @@ import { LoginComponent } from './HIS/login/login.component';
 import { MasterComponent } from './HIS/master/master.component';
 import { RegistrationComponent } from './HIS/master/registration/registration.component';
 import { EditorComponent } from './HIS/editor/editor.component';
+import { AuthGuard } from './guard/auth.guard';
+import { BeforeLoginGuard } from './guard/before-login.guard';
+import { AuthService } from './service/auth.service';
 @NgModule({
     imports: [
         RouterModule.forRoot([
             {
-                path: '', component: AppMainComponent,
+                path: '',
+                component: LoginComponent,
+                canActivateChild: [BeforeLoginGuard],
                 children: [
-                    {path: '', component: DashboardComponent},
+                    {
+                        path: 'login',
+                        component: LoginComponent
+                    }
+                ]
+            },
+            { 
+                path: '', component: AppMainComponent,
+                canActivateChild: [AuthGuard],
+                children: [
+                    {path: '', component: EditorComponent},
                     {path: 'uikit/formlayout', component: FormLayoutComponent},
                     {path: 'uikit/input', component: InputComponent},
                     {path: 'uikit/floatlabel', component: FloatLabelComponent},
@@ -56,13 +71,16 @@ import { EditorComponent } from './HIS/editor/editor.component';
                     {path: 'icons', component: IconsComponent},
                     {path: 'blocks', component: BlocksComponent},
                     {path: 'documentation', component: DocumentationComponent},
-                    {path: 'login', component: LoginComponent},
                     {path: 'code-master', component: MasterComponent},
                     {path: 'master/registration', component: RegistrationComponent},
                     {path: 'editor', component: EditorComponent}
-                ]
+                ],
+                
             },
-            {path: '**', redirectTo: 'pages/empty'},
+            { path: '', redirectTo: 'login', pathMatch: 'full' },
+            { path: '', redirectTo: 'editor', pathMatch: 'full' },
+          
+            {path: '**', redirectTo: 'editor'},
         ], {scrollPositionRestoration: 'enabled'})
     ],
     exports: [RouterModule]

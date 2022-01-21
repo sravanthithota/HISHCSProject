@@ -25,4 +25,7 @@ export class LocalStoreService {
   public clear(){
     this.ls.clear();
   }
+  public removeItem(key){
+    this.ls.removeItem(key);
+  }
 }

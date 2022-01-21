@@ -173,3 +173,18 @@ label{
     color: royalblue;
 }
 .field{ margin-bottom: 0.6rem !important}
+.rtl {
+    direction: rtl;
+}
+
+input.ng-touched.ng-invalid{
+    border: 1px solid red !important;
+    }
+    select.ng-touched.ng-invalid{
+        border: 1px solid red !important;
+        }
+        .p-tabview .p-tabview-nav li .p-tabview-nav-link{
+            padding: 0.6rem;
+    font-weight: 500;
+        }
+   
